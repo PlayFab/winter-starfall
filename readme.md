@@ -2,7 +2,7 @@
 
 This is an [Azure PlayFab](https://www.playfab.com) demo game showcasing Economy v2, Azure Functions, and more.
 
-Play this game at [winterstarfall.com](https://winterstarfallcom/).
+Play this game at [winterstarfall.azureedge.net](https://winterstarfall.azureedge.net/).
 
 If you have a free PlayFab developer account, you can [view this title in Game Manager](https://developer.playfab.com/en-us/F8941/dashboard).
 
