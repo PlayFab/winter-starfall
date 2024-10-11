@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	@apply h-screen bg-white font-sans xl:bg-html;
+	color: #320f26;
+}
+
+div.markdown p {
+	@apply my-4;
+}
+
+div.privacy p {
+	@apply my-4;
+}

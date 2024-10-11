@@ -1,0 +1,95 @@
+{
+	"enemies": [
+		{
+			"id": "anartan-soldier",
+			"image": "anartan-soldier",
+			"name": "Anartan soldier",
+			"description": "The kingdom has been at peace for so long that they're not much more than babysitters.",
+			"hp": 30,
+			"damage": 9,
+			"range": "0.2",
+			"xp": 10,
+			"size": 0
+		},
+		{
+			"id": "forest-west-wolf",
+			"image": "forest-west-wolf",
+			"name": "Western Song Wolf",
+			"description": "Flames pour from its eyes, but it can clearly see you.",
+			"hp": 35,
+			"damage": 14,
+			"range": "0.15",
+			"xp": 25,
+			"size": 0
+		},
+		{
+			"id": "forest-west-bear",
+			"image": "forest-west-bear",
+			"name": "Western Song Bear",
+			"description": "Its head scrapes the roof, lashing out with flaming claws that could fell a tree.",
+			"hp": 200,
+			"damage": 20,
+			"range": "0.25",
+			"xp": 100,
+			"size": 1
+		}
+	],
+	"groups": [
+		{
+			"id": "fishing-dungeon-1",
+			"turnOrder": 0,
+			"enemies": ["anartan-soldier", "anartan-soldier", "anartan-soldier"],
+			"reward": "",
+			"canLose": true
+		},
+		{
+			"id": "forest-west-maze-1",
+			"turnOrder": 2,
+			"enemies": ["forest-west-wolf"],
+			"reward": "forest-west-1-reward"
+		},
+		{
+			"id": "forest-west-maze-2",
+			"turnOrder": 2,
+			"enemies": ["forest-west-wolf", "forest-west-wolf"],
+			"reward": "forest-west-1-reward"
+		},
+		{
+			"id": "forest-west-maze-4",
+			"turnOrder": 2,
+			"enemies": ["forest-west-wolf", "forest-west-wolf", "forest-west-wolf", "forest-west-wolf"],
+			"reward": "forest-west-2-reward"
+		},
+		{
+			"id": "forest-west-maze-6",
+			"turnOrder": 2,
+			"enemies": [
+				"forest-west-wolf",
+				"forest-west-wolf",
+				"forest-west-wolf",
+				"forest-west-wolf",
+				"forest-west-wolf",
+				"forest-west-wolf"
+			],
+			"reward": "forest-west-2-reward"
+		},
+		{
+			"id": "forest-west-temple-boss",
+			"turnOrder": 2,
+			"enemies": [
+				"forest-west-bear",
+				"forest-west-wolf",
+				"forest-west-wolf",
+				"forest-west-wolf",
+				"forest-west-wolf"
+			],
+			"reward": "forest-west-temple-reward"
+		}
+	],
+	"progressions": [
+		{
+			"id": "forest-west-maze",
+			"groups": ["forest-west-maze-1", "forest-west-maze-2", "forest-west-maze-4", "forest-west-maze-6"]
+		}
+	]
+}

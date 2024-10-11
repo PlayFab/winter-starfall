@@ -1,0 +1,49 @@
+[
+    {
+        "id": "intro-village-1",
+        "events": [
+            {
+                "type": 1,
+                "thought": true,
+                "text": "Nope.",
+                "messages": [
+                    "As my head falls, I glimpse someone running."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Collapse",
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "fishing"
+                    },
+                    {
+                        "type": 1,
+                        "value": "nadias-house"
+                    },
+                    {
+                        "type": 2,
+                        "value": "intro"
+                    },
+                    {
+                        "type": 2,
+                        "value": "intro-village"
+                    },
+                    {
+                        "type": 3,
+                        "value": "fishing"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    },
+                    {
+                        "type": 0,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

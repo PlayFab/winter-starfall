@@ -1,0 +1,787 @@
+[
+    {
+        "id": "fishing-nadia-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Hey, whoa, don't get up!\"",
+                "speaker": 1,
+                "messages": [
+                    "How did you recover so fast? You don't smell as bad as what I usually pull in from the sea.",
+                    "Um, sorry, rude. Hi! Hello. Hi! I'm Nadia. I'm kinda new here too! Kinda.",
+                    "I won't pry as to why you washed ashore like that. But you're not going anywhere until the fever breaks."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-nadia-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-nadia-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I'm fine! I'm - ow! - fine. Let me go!\"",
+                "speaker": 0,
+                "messages": [
+                    "I'm not an invalid, I'm well enough to walk. Thank you for your hospitality.",
+                    "My name is - ah, ouch - it's Sara Winter and I have urgent matters to discuss with your - aaaah, ah! - king. Your king!",
+                    "Cease your giggling!",
+                    "When does the next trade caravan leave for the capital?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-nadia-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-nadia-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Caravan? Not for months.\"",
+                "speaker": 1,
+                "messages": [
+                    "Lady, I like the attitude, but I can see your knees wobbling. You're funny.",
+                    "You can go see the king when I can't push you around with my pinkie finger. Silly."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-nadia-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-nadia-4",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"You're in no hurry.\"",
+                "speaker": 1,
+                "messages": [
+                    "Let's start slow before you barge into the throne room and break a hip. Come with me to the general store.",
+                    "My wheelbarrow's broken and you can, uh, carry back a jar."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "To The Bait and Basket",
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "fishing-store"
+                    },
+                    {
+                        "type": 1,
+                        "value": "fishing-dungeon-cinematic"
+                    },
+                    {
+                        "type": 2,
+                        "value": "nadias-house"
+                    },
+                    {
+                        "type": 4,
+                        "value": "fishing-store"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-store-1",
+        "watch": [
+            {
+                "condition": "fishingStoreBuySomething",
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-store-2"
+                    }
+                ]
+            }
+        ],
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Grab whatever you need.\"",
+                "speaker": 1,
+                "messages": [
+                    "Here's some coin for you. Go on, I'll just be a minute.",
+                    "Karl thinks I haven't brought him the most perfect tomatoes he's ever seen. Aren't they perfect? They're perfect.",
+                    "I'll bring him to his senses."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-store-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"All good?\"",
+                "speaker": 1,
+                "messages": [
+                    "Take your time; Karl came to see reason."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": "fishing"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-prelude-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Bring out the witch!\"",
+                "speaker": 2,
+                "messages": [
+                    "Hear me, villagers! I am Captain Warren Axim, come by the command of your king!",
+                    "We are here to capture the witch who has been plaguing this kingdom!",
+                    "You have one hour to hand her over, or see your houses burn. I take no pleasure in threatening you, but these are my orders."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-prelude-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-prelude-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Whaaaaat is this...\"",
+                "speaker": 1,
+                "messages": [
+                    "What is he talking about? What witch? We don't have a witch here. Don't be silly.",
+                    "Silly. Silly."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-prelude-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-prelude-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"No one leaves!\"",
+                "speaker": 2,
+                "messages": [
+                    "Don't think you can hide her or run away. Anyone who tries to flee will be met with our arrows.",
+                    "Do you understand me? Shops are closed!",
+                    "One hour!"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-prelude-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-prelude-4",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"No no nonono...\"",
+                "speaker": 1,
+                "messages": [
+                    "Not here too.",
+                    "Not here, not here, not here.",
+                    "I won't leave, I won't, I like it here.",
+                    "Silly. Silly. Silly."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-prelude-5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-prelude-5",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Nadia, please...\"",
+                "speaker": 0,
+                "messages": [
+                    "If he's from the capital, I need to talk to him.",
+                    "Please, let me --"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-prelude-6"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-prelude-6",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Get off me!\"",
+                "speaker": 1,
+                "messages": [
+                    "No! No more!",
+                    "You all! Get away from those houses! Go away! Go!",
+                    "I won't let you burn down my town!",
+                    "I WON'T!"
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Fight them",
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "fishing-dungeon"
+                    },
+                    {
+                        "type": 2,
+                        "value": "fishing-store"
+                    },
+                    {
+                        "type": 2,
+                        "value": "fishing-dungeon-cinematic"
+                    },
+                    {
+                        "type": 4,
+                        "value": "fishing-dungeon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-post",
+        "watch": [
+            {
+                "condition": "didNadiaSurviveLastBattle",
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-post-a-1"
+                    }
+                ],
+                "failure": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-post-b-1"
+                    }
+                ]
+            }
+        ],
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "fishing-dungeon"
+                    },
+                    {
+                        "type": 5,
+                        "value": "ProgressCheckpoint",
+                        "argument": {
+                            "checkpoint": "first-battle"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-post-a-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I... I did it?\"",
+                "speaker": 1,
+                "messages": [
+                    "Take that! Yeah!",
+                    "Hah, oof. Now get out! Get lost! Go away!",
+                    "I'll... urp, I'll beat the rest of you too! Ugh."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-post-a-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-post-a-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Nadia, hush for a moment.\"",
+                "speaker": 0,
+                "messages": [
+                    "I see your exhaustion.",
+                    "He has half a dozen more men. You cannot fight them in this state.",
+                    "Please be quiet and let me handle this."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-post-a-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-post-a-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"No, I...\"",
+                "speaker": 1,
+                "messages": [
+                    "I'm... fine. Fiiine.",
+                    "Uh, really. Maybe.",
+                    "Ooooh dizzy."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Collapse",
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-post-b-1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-post-b-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I surrender!\"",
+                "speaker": 0,
+                "messages": [
+                    "Congratulations men!",
+                    "You have defeated my ensorcelled puppet, this innocent child.",
+                    "It seems that even with all my evil power I cannot outmatch the might of the... this kingdom.",
+                    "I therefore submit myself to you and await the king's mercy."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-dungeon-post-b-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-dungeon-post-b-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"We got her! Close in!\"",
+                "speaker": 2,
+                "messages": [
+                    "Close in ranks. Swords out!",
+                    "Don't be fooled by anything she does. Witches are untrustworthy, but this cage will suppress her demonic power.",
+                    "Steady now. Forward."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Get in the cage",
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "fishing-cage"
+                    },
+                    {
+                        "type": 2,
+                        "value": "fishing-dungeon-post"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Come on witch, in with you!\"",
+                "speaker": 2,
+                "messages": [
+                    "Move it, go on, get!",
+                    "I'd prefer to bring you in alive, but cutting you down would not trouble my conscience.",
+                    "Do you understand me?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Is this your first witch hunt?\"",
+                "speaker": 0,
+                "messages": [
+                    "I'm surprised you brought so few soldiers to deal with the likes of me.",
+                    "Is there trouble elsewhere in the kingdom? So many witches, so little... men?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Don't concern yourself with that.\"",
+                "speaker": 2,
+                "messages": [
+                    "You will be brought to the Green City of Anarta.",
+                    "There you will be tried and executed.",
+                    "Now that we have you, escape is impossible. The cage was fortified against your evil magic."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-4",
+        "events": [
+            {
+                "type": 1,
+                "text": "Sara gingerly touches her finger to a bar.",
+                "speaker": 0,
+                "thought": true,
+                "messages": [
+                    "So it is. But not with the kind of magic that Nadia uses.",
+                    "This is a Solar ward. Why is it here?",
+                    "No, no.",
+                    "Who is here?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-5",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Come now, my evil magic?\"",
+                "speaker": 0,
+                "messages": [
+                    "Oh, I was bored of controlling that little town.",
+                    "Tell me more of the destruction my, ah, sisters have unleashed on your kingdom."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-6"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-6",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Unnatural devilry.\"",
+                "speaker": 2,
+                "messages": [
+                    "Witches have corrupted the Northern Song Forest.",
+                    "The royal magic inspector visits the forest and reports on your coven's evil activities."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-7",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"You believe this man?\"",
+                "speaker": 0,
+                "messages": [
+                    "What has he found in the forest?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-8"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-8",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Of course I do.\"",
+                "speaker": 2,
+                "messages": [
+                    "Those who question royal authority are stripped of their rank.",
+                    "Elena was... argh, stop bothering me."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-9"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-9",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"A friend of yours.\"",
+                "speaker": 0,
+                "messages": [
+                    "Elena questioned him and paid the price.",
+                    "What happened to her?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-10"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-10",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"She went in alone.\"",
+                "speaker": 2,
+                "messages": [
+                    "Elena went into the Northern Song Forest without authorization.",
+                    "I think she was lucky just to be stripped of her command.",
+                    "She found trees that move when you turn your back. Creatures that are on fire but never burn. The ground ripples by itself."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-11"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-11",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Interesting.\"",
+                "speaker": 0,
+                "messages": [
+                    "But no witches?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "fishing-cage-12"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fishing-cage-12",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Just you.\"",
+                "speaker": 2,
+                "messages": [
+                    "You and your wicked sisters can answer for your crimes at the capital."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "forest-west"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-camp"
+                    },
+                    {
+                        "type": 2,
+                        "value": "fishing"
+                    },
+                    {
+                        "type": 2,
+                        "value": "fishing-cage"
+                    },
+                    {
+                        "type": 3,
+                        "value": "forest-west"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

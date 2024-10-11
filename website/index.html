@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Winter Starfall" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="theme-color" content="#FFFFFF" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="winterstarfall.azureedge.net" />
+		<meta property="og:title" content="Winter Starfall" />
+		<meta property="og:description" content="PlayFab demo game showcasing Economy v2, Azure Functions, and more" />
+		<meta property="og:image" content="https://winterstarfall.azureedge.net/ogimage.jpg" />
+		<meta property="og:locale" content="en_US" />
+		<title>Winter Starfall</title>
+		<meta name="msapplication-square70x70logo" content="public/assets/pwa/mstile-icon-128.png" />
+		<meta name="msapplication-square150x150logo" content="public/assets/pwa/mstile-icon-270.png" />
+		<meta name="msapplication-square310x310logo" content="public/assets/pwa/mstile-icon-558.png" />
+		<meta name="msapplication-wide310x150logo" content="public/assets/pwa/mstile-icon-558-270.png" />
+		<link rel="apple-touch-icon" href="public/assets/pwa/apple-icon-180.png" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2048-2732.jpg"
+			media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2732-2048.jpg"
+			media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1668-2388.jpg"
+			media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2388-1668.jpg"
+			media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1536-2048.jpg"
+			media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2048-1536.jpg"
+			media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1488-2266.jpg"
+			media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2266-1488.jpg"
+			media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1640-2360.jpg"
+			media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2360-1640.jpg"
+			media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1668-2224.jpg"
+			media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2224-1668.jpg"
+			media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1620-2160.jpg"
+			media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2160-1620.jpg"
+			media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1290-2796.jpg"
+			media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2796-1290.jpg"
+			media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1179-2556.jpg"
+			media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2556-1179.jpg"
+			media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1284-2778.jpg"
+			media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2778-1284.jpg"
+			media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1170-2532.jpg"
+			media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2532-1170.jpg"
+			media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1125-2436.jpg"
+			media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2436-1125.jpg"
+			media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1242-2688.jpg"
+			media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2688-1242.jpg"
+			media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-828-1792.jpg"
+			media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1792-828.jpg"
+			media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1242-2208.jpg"
+			media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-2208-1242.jpg"
+			media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-750-1334.jpg"
+			media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1334-750.jpg"
+			media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-640-1136.jpg"
+			media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="public/assets/pwa/apple-splash-1136-640.jpg"
+			media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+		/>
+	</head>
+	<body>
+		<div id="root"></div>
+		<noscript>
+			<img src="/logo.png" alt="Winter Starfall logo" style="height: 128px; width: 128px" />
+			<h1>Winter Starfall</h1>
+			<h2>PlayFab demo game showcasing Economy v2, Azure Functions, and more</h2>
+			<p>
+				Try the online services powering some of today's biggest games. Clone this game and experiment with
+				PlayFab, the game industry's most powerful backend platform.
+			</p>
+			<p><a href="https://github.com/PlayFab/winter-starfall">Source code on GitHub</a></p>
+			<h2>Features</h2>
+			<ul>
+				<li>
+					<strong>Open source</strong><br />Visit our GitHub repository and get source code for the website
+					and its C# Azure Functions.
+				</li>
+				<li>
+					<strong>Data included</strong><br />Get everything needed to populate a PlayFab title. Adjust game
+					balance in our developer portal.
+				</li>
+				<li>
+					<strong>Easy to host</strong><br />Winter Starfall builds to static HTML, perfect for hosting on
+					Azure Blob Storage or S3.
+				</li>
+				<li>
+					<strong>Best practices</strong><br />Developed by PlayFab engineers, Winter Starfall shows how to
+					minimize cost.
+				</li>
+			</ul>
+			<hr />
+			<h2>
+				<a href="https://www.playfab.com/">PlayFab</a> is the game industry's most powerful backend platform
+			</h2>
+			<h3>Microsoft</h3>
+			<ul role="list">
+				<li>
+					<a href="https://www.microsoft.com/">Microsoft</a>
+				</li>
+				<li>
+					<a href="https://www.playfab.com/">PlayFab</a>
+				</li>
+			</ul>
+			<h3>PlayFab</h3>
+			<ul role="list">
+				<li>
+					<a href="https://learn.microsoft.com/en-us/gaming/playfab/">Documentation</a>
+				</li>
+				<li>
+					<a href="https://blog.playfab.com/blog">Blog</a>
+				</li>
+				<li>
+					<a href="https://community.playfab.com/">Forums</a>
+				</li>
+				<li>
+					<a href="https://playfab.com/contact/">Contact us</a>
+				</li>
+			</ul>
+			<h3>Social</h3>
+			<ul role="list">
+				<li>
+					<a href="https://www.facebook.com/playfabnetwork">Facebook</a>
+				</li>
+				<li>
+					<a href="http://twitter.com/AzurePlayFab">Twitter</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/company/3641570">LinkedIn</a>
+				</li>
+				<li>
+					<a href="https://discord.gg/msftgamedev">Discord</a>
+				</li>
+				<li>
+					<a href="http://youtube.com/user/playfabnetwork">YouTube</a>
+				</li>
+				<li>
+					<a href="https://github.com/PlayFab">GitHub</a>
+				</li>
+			</ul>
+			<h3>Legal</h3>
+			<ul role="list">
+				<li>
+					<a href="#/privacy">Privacy Policy</a>
+				</li>
+				<li>
+					<a href="#/terms">Terms of Service</a>
+				</li>
+			</ul>
+			<hr />
+			<h1>JavaScript is required</h1>
+			<p>Please enable JavaScript in your browser to continue.</p>
+		</noscript>
+		<script src="/PlayFabAdminApi.js"></script>
+		<script src="/PlayFabClientApi.js"></script>
+		<script src="/PlayFabEconomyApi.js"></script>
+		<script src="/PlayFabCloudScriptApi.js"></script>
+		<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+		<script src="https://connect.facebook.net/en_US/sdk.js" async defer crossorigin="anonymous"></script>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
+</html>

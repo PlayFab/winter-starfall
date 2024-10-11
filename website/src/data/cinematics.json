@@ -1,0 +1,21 @@
+{
+    "progressions": [
+        {
+            "id": "forest-west-no-path",
+            "cinematics": [
+                "forest-west-no-path-1",
+                "forest-west-no-path-2",
+                "forest-west-no-path-3",
+                "forest-west-no-path-4",
+                "forest-west-no-path-5",
+                "forest-west-no-path-6",
+                "forest-west-no-path-7",
+                "forest-west-no-path-8",
+                "forest-west-no-path-9",
+                "forest-west-no-path-10",
+                "forest-west-no-path-11",
+                "forest-west-no-path-12"
+            ]
+        }
+    ]
+}

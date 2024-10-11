@@ -1,0 +1,1999 @@
+[
+    {
+        "id": "forest-west-camp-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"We're setting up here!\"",
+                "speaker": 2,
+                "messages": [
+                    "Ronald, take two men and secure the perimeter. No surprises tonight.",
+                    "Lochan, see to the horses. They've had a long day.",
+                    "You're quiet tonight, witch. Plotting your next move?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Mm, I appreciate the escort.\"",
+                "speaker": 0,
+                "messages": [
+                    "I'm eager to reach the capital, but this forest feels more dangerous than I expected.",
+                    "Can't you sense it?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"And you wonder why we hunt your kind.\"",
+                "speaker": 2,
+                "messages": [
+                    "You will remain in this cage throughout your trial and execution.",
+                    "What do you want at the capital? Your life ends there."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-4",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Please, you must understand why I'm here.\"",
+                "speaker": 0,
+                "messages": [
+                    "I am a warning. An invasion is coming to your shores.",
+                    "Except I think it's already here. I've found traces of a magic that shouldn't exist.",
+                    "Something so dangerous it summons unstoppable celestial fire to --"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-6"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-6",
+        "events": [
+            {
+                "type": 0,
+                "text": "\"Bwaahahaaa!\""
+            },
+            {
+                "type": 2,
+                "image": "warren-laugh-mock",
+                "alt": "Warren Axim laughing mockingly, under the forest at night"
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-7",
+        "events": [
+            {
+                "type": 1,
+                "text": "Obnoxious laughter muffles all sound.",
+                "speaker": 0,
+                "thought": true,
+                "messages": [
+                    "That's when the attack comes.",
+                    "I watch wide-eyed as wolves dart from the forest understory. Flames pour from their eyes.",
+                    "Enormous animals grab his men in their jaws and race through the bushes. The soldiers are too surprised to scream.",
+                    "The horses are not."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-8"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-8",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Damn it! Wha-what happened?\"",
+                "speaker": 2,
+                "messages": [
+                    "What was that?",
+                    "Where are my men?",
+                    "WHAT DID YOU DO?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-9"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-9",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"We have to go after them!\"",
+                "speaker": 0,
+                "messages": [
+                    "Wolves! And they... dragged into the forest like dolls!",
+                    "Eyes burning with magic that I --"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-10"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-10",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Rrrgh, I can't leave you here.\"",
+                "speaker": 2,
+                "messages": [
+                    "I can't see in this darkness, can't track those... those beasts.",
+                    "But I can't let you out of my sight. For all I know, you caused this.",
+                    "Damn, damn, damn."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-11"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-11",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I don't control those things!\"",
+                "speaker": 0,
+                "messages": [
+                    "But I can see the trails the wolves left behind.",
+                    "Let me join you.",
+                    "We can find them!"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-camp-12"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-camp-12",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Fine. If this is a trick...\"",
+                "speaker": 2,
+                "messages": [
+                    "Give me a moment to unlock this thing.",
+                    "Put one foot out of line and I'll give the wolves something else to eat."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Follow the trails",
+                "loading": true,
+                "sequential": true,
+                "actions": [
+                    {
+                        "type": 5,
+                        "value": "ProgressCheckpoint",
+                        "argument": {
+                            "checkpoint": "uncaged"
+                        }
+                    },
+                    {
+                        "type": 8,
+                        "value": 250
+                    },
+                    {
+                        "type": 6,
+                        "value": "party,completed"
+                    },
+                    {
+                        "type": 7,
+                        "value": "party"
+                    },
+                    {
+                        "type": 9
+                    },
+                    {
+                        "type": 12
+                    },
+                    [
+                        {
+                            "type": 1,
+                            "value": "forest-west-trails"
+                        },
+                        {
+                            "type": 2,
+                            "value": "forest-west-camp"
+                        },
+                        {
+                            "type": 4,
+                            "value": ""
+                        }
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-trails",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-nw"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-ne"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-sw"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-se"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-nw-1"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-nw-2"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-nw-3"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-nw-4"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-ne-1"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-ne-2"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-ne-3"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-ne-4"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-sw-1"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-sw-2"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-sw-3"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-sw-4"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-se-1"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-se-2"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-se-3"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-maze-se-4"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-trails"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-done"
+                    },
+                    {
+                        "type": 3,
+                        "value": "forest-west-maze"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-nw",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": "forest-west-maze-nw"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    },
+                    {
+                        "type": 0,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-ne",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": "forest-west-maze-ne"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    },
+                    {
+                        "type": 0,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-sw",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": "forest-west-maze-sw"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    },
+                    {
+                        "type": 0,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-se",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": "forest-west-maze-se"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    },
+                    {
+                        "type": 0,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-nw-2-over-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Come on, I nearly had him!\"",
+                "speaker": 100,
+                "messages": [
+                    "Thanks, but I was just about to kill that thing myself.",
+                    "You're... captain, why is she free?"
+                ]
+            },
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-nw-2"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-nw-2-over-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-nw-2-over-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"The witch has agreed to help.\"",
+                "speaker": 2,
+                "messages": [
+                    "Tracking the wolves in this darkness is more difficult than I expected.",
+                    "She is able to see the paths left by those things.",
+                    "It's the only way we found you."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-nw-2-over-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-nw-2-over-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Fine.\"",
+                "speaker": 100,
+                "messages": [
+                    "Looks like I'll be carrying more than my own weight today."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 10,
+                        "value": 100
+                    },
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-rescued"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-ne-4-over-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"That was too close!\"",
+                "speaker": 101,
+                "messages": [
+                    "Is this what you call an easy trip to the capital?"
+                ]
+            },
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-ne-4"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-ne-4-over-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-ne-4-over-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I'm not happy about this either.\"",
+                "speaker": 2,
+                "messages": [
+                    "I am returning to the capital with a freed witch. I'm not losing my entire squad as well."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 10,
+                        "value": 101
+                    },
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-rescued"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-sw-3-over-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I'm good, I'm okay.\"",
+                "speaker": 102,
+                "messages": [
+                    "I thought you said this would be a routine mission."
+                ]
+            },
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-sw-3"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-sw-3-over-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-sw-3-over-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"This is not the forest I grew up around.\"",
+                "speaker": 2,
+                "messages": [
+                    "We need to be gone from here. Get your things."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 10,
+                        "value": 102
+                    },
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-rescued"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-se-1-over-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I told you this would happen.\"",
+                "speaker": 103,
+                "messages": [
+                    "Why are we out here hassling fishermen?",
+                    "This isn't our beat."
+                ]
+            },
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-se-1"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-se-1-over-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-se-1-over-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I'm coming around to your point.\"",
+                "speaker": 2,
+                "messages": [
+                    "This isn't what any of us signed up for.",
+                    "I know.",
+                    "Let's just get back."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 10,
+                        "value": 103
+                    },
+                    {
+                        "type": 0,
+                        "value": "forest-west-maze-rescued"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-rescued",
+        "watch": [
+            {
+                "condition": "hasRescuedEveryoneFromWesternSongForest",
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-rescue"
+                    }
+                ],
+                "failure": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Unbelievable.\"",
+                "speaker": 2,
+                "messages": [
+                    "We've been attacked, my squad is lost, and I'm cooperating with a witch.",
+                    "What a disgrace."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-1a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-1a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"They are not lost, not yet.\"",
+                "speaker": 0,
+                "messages": [
+                    "Why can't you see the trails?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-1b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-1b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Why can you?\"",
+                "speaker": 2,
+                "messages": [
+                    "I grew up in this forest. I know the feel of every root and rock.",
+                    "But I don't recognize it anymore. The birds are quiet. The bushes are still.",
+                    "Is your magic suppressing nature?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-1c"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-1c",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"What magic?\"",
+                "speaker": 0,
+                "messages": [
+                    "Oh dear, you actually believe I'm a witch.",
+                    "Ahh ha ha.",
+                    "I'm afraid not."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Wait, no magic?\"",
+                "speaker": 2,
+                "messages": [
+                    "You were lying to protect that girl?",
+                    "Damn, damn. Damn!",
+                    "What am I to tell the king? That I captured a broken witch?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-2a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-2a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Is that so hard to believe?\"",
+                "speaker": 0,
+                "messages": [
+                    "You were so desperate that you'd take anything.",
+                    "Don't worry. I'll try and put on a show."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-2b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-2b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Aargh, I can't believe this.\"",
+                "speaker": 2,
+                "messages": [
+                    "It's not your magic. You can't do magic.",
+                    "I had an actual witch in my hands and I let her go.",
+                    "I'm going to lose my command for this."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Leave me alone.\"",
+                "speaker": 2,
+                "messages": [
+                    "... cannot believe this..."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-4",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"You're not used to failure.\"",
+                "speaker": 0,
+                "messages": [
+                    "This isn't the expedition you wanted, is it?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-4a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-4a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I'm not a fool. I know why I'm here.\"",
+                "speaker": 2,
+                "messages": [
+                    "Crop yields are down, and the latest expansion into the forest hasn't bore fruit.",
+                    "So why not send the city guard away to find a witch?",
+                    "Hang her! Pretend that makes crops grow. See how well her blood makes fertilizer. Damn."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-4b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-4b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Such barbarism.\"",
+                "speaker": 0,
+                "messages": [
+                    "I would make a fine sacrifice.",
+                    "But if that's the goal, then so would you."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-5",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I know it's a lie.\"",
+                "speaker": 2,
+                "messages": [
+                    "I hate that I know it. I hate this pointless exercise. And I hate that you're making me confess it.",
+                    "Easier to turn you in."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-5a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-5a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"It is easier to go along with a lie.\"",
+                "speaker": 0,
+                "messages": [
+                    "Why not? So small at first.",
+                    "And you're rewarded with power.",
+                    "But the price of truth goes up so much faster."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-5b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-5b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"At the top, you embody it.\"",
+                "speaker": 0,
+                "messages": [
+                    "No one above you to blame.",
+                    "Watch the lie's dark ink flow as it holds a quill and signs your name. Threats, evictions, death warrants.",
+                    "Whatever it demands."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-6",
+        "events": [
+            {
+                "type": 1,
+                "text": "Warren watches me with cold eyes.",
+                "speaker": 0,
+                "thought": true,
+                "messages": [
+                    "I deserve it.",
+                    "My fault, my fault, my fault."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-7",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Why darken our shores?\"",
+                "speaker": 2,
+                "messages": [
+                    "You are not Anartan. You don't fit with the villagers at Bluefin Waters.",
+                    "Why are you here?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-7a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-7a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I paid the price for my truth.\"",
+                "speaker": 0,
+                "messages": [
+                    "A disaster is coming to my people, in Aurora. One I can't stop.",
+                    "They are evacuating to this continent. Not to coexist but to conquer.",
+                    "I want to warn anyone in power to be ready."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-7b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-7b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Conquer us?\"",
+                "speaker": 2,
+                "messages": [
+                    "Such nonsense.",
+                    "What proof do you have of any of this, beyond those ridiculous clothes?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-7c"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-7c",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I can...\"",
+                "speaker": 0,
+                "messages": [
+                    "I can tell you of the armaments of all three hundred and fifteen airships.",
+                    "I can recite the names of the generals, the captains, the lieutenants. Every single one.",
+                    "I can describe the magic that will be used to raze your cities and uproot your forests."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-7d"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-7d",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"You cannot.\"",
+                "speaker": 2,
+                "messages": [
+                    "You have no magic, so you said.",
+                    "No proof."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-8",
+        "events": [
+            {
+                "type": 1,
+                "text": "Stupid. I came here with nothing.",
+                "speaker": 0,
+                "thought": true,
+                "messages": [
+                    "My hands instinctually come together to form a sphere.",
+                    "I rotate them, navigating the familiar lines and whorls of solar energy.",
+                    "Nothing happens. My fists clench.",
+                    "I will not cry in front of him."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-9",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Our magic comes from the sun.\"",
+                "speaker": 0,
+                "messages": [
+                    "We don't wait for the light to reach us. We take it from the source.",
+                    "As much as we can."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-9a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-9a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I did that once.\"",
+                "speaker": 0,
+                "messages": [
+                    "I could trace through the layers of superheated gas to a well of power.",
+                    "Our researchers find those paths and teach others.",
+                    "You need to be gentle. Touching the wrong spot will burn you out."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-9b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-9b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I was our best.\"",
+                "speaker": 0,
+                "messages": [
+                    "I led a great team at the Arc Celeste.",
+                    "We found the strongest paths, the safest spots. The most power.",
+                    "In our glory we raised the Arc Celeste to the sky."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-9c"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-9c",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"And now I...\"",
+                "speaker": 0,
+                "messages": [
+                    "I can't even feel the sun's warmth on my skin."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-10",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"The sun has a will.\"",
+                "speaker": 0,
+                "messages": [
+                    "It's not happy with my people.",
+                    "And soon we will get more energy than we can handle."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-10b"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-10b",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"A flare.\"",
+                "speaker": 0,
+                "messages": [
+                    "In two weeks a solar flare will hit my homeland of Aurora and reduce it to a cinder.",
+                    "Rather than accept our punishment, we are coming to wipe you out."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-10c"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-10c",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Aurora's might is unfathomable.\"",
+                "speaker": 0,
+                "messages": [
+                    "Everyone will be slaughtered.",
+                    "That's the plan.",
+                    "Then our society resumes as if nothing happened."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-11",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"What good will warning us do?\"",
+                "speaker": 2,
+                "messages": [
+                    "How could we resist such an invasion?",
+                    "What chance does anyone have?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-11a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-11a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I don't know.\"",
+                "speaker": 0,
+                "messages": [
+                    "I renounced my Solar magic to leave Aurora undetected. I feel like a husk.",
+                    "You had to be told. You're innocent. You could have a chance.",
+                    "To die on your feet, I suppose."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-12",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Was that Solar magic before?\"",
+                "speaker": 2,
+                "messages": [
+                    "What about that girl from the village?",
+                    "Did she use Solar magic against my men?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-no-path-12a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-no-path-12a",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I haven't seen anything like that.\"",
+                "speaker": 0,
+                "messages": [
+                    "It was something else.",
+                    "I don't know what she was casting, or how, but I'd give anything to be able to do it.",
+                    "If I had anything left."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-maze-back",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": "forest-west-maze"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-rescue",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 5,
+                        "value": "ProgressCheckpoint",
+                        "argument": {
+                            "checkpoint": "solders-rescued"
+                        }
+                    },
+                    {
+                        "type": 6,
+                        "value": "party,completed"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-nw"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-ne"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-sw"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-se"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-nw-1"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-nw-2-over"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-nw-3"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-nw-4"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-ne-1"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-ne-2"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-ne-3"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-ne-4-over"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-sw-1"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-sw-2"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-sw-3-over"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-sw-4"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-se-1-over"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-se-2"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-se-3"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-maze-se-4"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-temple"
+                    },
+                    {
+                        "type": 1,
+                        "value": "forest-west-temple-interior"
+                    },
+                    {
+                        "type": 3,
+                        "value": "forest-west-temple"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-interior-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"What is this place?\"",
+                "speaker": 2,
+                "messages": [
+                    "The moss has grown over everything.",
+                    "Chairs are all rotted.",
+                    "Why haven't our scouts found this temple?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-interior-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-interior-2",
+        "events": [
+            {
+                "type": 0,
+                "text": "\"There's something in the hollow.\""
+            },
+            {
+                "type": 2,
+                "image": "forest-west-temple-dew",
+                "alt": "A silver bowl resting in the hollow of an ancient tree, a drop of dew lies at the bottom"
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-interior-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-interior-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Let me see that!\"",
+                "speaker": 0,
+                "messages": [
+                    "Beautiful.",
+                    "Oh, so much lighter than it looks.",
+                    "Where have I smelled this before?",
+                    "I know this, it's the, the..."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-interior-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-interior-4",
+        "events": [
+            {
+                "type": 0,
+                "text": "\"It's mint!\""
+            },
+            {
+                "type": 2,
+                "image": "forest-west-temple-drink",
+                "alt": "Sara holds the silver bowl that was resting in the hollow of an ancient tree"
+            },
+            {
+                "type": 4,
+                "text": "Drink",
+                "loading": true,
+                "sequential": true,
+                "actions": [
+                    {
+                        "type": 5,
+                        "value": "ProgressCheckpoint",
+                        "argument": {
+                            "checkpoint": "sara-magic"
+                        }
+                    },
+                    {
+                        "type": 8,
+                        "value": 250
+                    },
+                    {
+                        "type": 6,
+                        "value": "party,completed"
+                    },
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-interior-5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-interior-5",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Warm.\"",
+                "speaker": 0,
+                "messages": [
+                    "Oh. Oh wow.",
+                    "I feel warm again."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-interior-6"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-interior-6",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Hey, Sara. Sara!\"",
+                "speaker": 2,
+                "messages": [
+                    "You must have heard that.",
+                    "A tree outside crashed against the temple.",
+                    "Something isn't happy with us here. Get up! Get! We need to go."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Leave",
+                "actions": [
+                    {
+                        "type": 1,
+                        "value": "forest-west-temple-boss"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-temple-interior"
+                    },
+                    {
+                        "type": 4,
+                        "value": "forest-west-temple-boss"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-boss-post-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"They are not supposed to grow to that size.\"",
+                "speaker": 2,
+                "messages": [
+                    "Check your injuries. Can everyone make it back to the capital?"
+                ]
+            },
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "forest-west-temple-boss"
+                    },
+                    {
+                        "type": 13,
+                        "value": "forest-west-no-path"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-united-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-united-2",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"I think I'm okay.\"",
+                "speaker": 102,
+                "messages": [
+                    "I'm fine. Little too much drool today."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-united-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-united-3",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Yeah, me too.\"",
+                "speaker": 103,
+                "messages": [
+                    "Same.",
+                    "My dog's gonna be so mad at me."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-united-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-united-4",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"What do we do about her?\"",
+                "speaker": 100,
+                "messages": [
+                    "You let her out. The cage is destroyed.",
+                    "Are we just going to walk back to the capital with this witch?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-temple-united-5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-temple-united-5",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"She's not... no, she is.\"",
+                "speaker": 2,
+                "messages": [
+                    "Our mission hasn't changed. We're escor-",
+                    "Taking her to the capital for a trial.",
+                    "I'm glad everyone is alive. Collect your things."
+                ]
+            },
+            {
+                "type": 4,
+                "text": "Move out",
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "forest-west-temple-boss-post"
+                    },
+                    {
+                        "type": 2,
+                        "value": "forest-west-temple"
+                    },
+                    {
+                        "type": 1,
+                        "value": "green-city-entrance"
+                    },
+                    {
+                        "type": 1,
+                        "value": "green-city-entrance-gates"
+                    },
+                    {
+                        "type": 3,
+                        "value": "green-city-entrance"
+                    },
+                    {
+                        "type": 4,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "forest-west-done",
+        "events": [
+            {
+                "type": 5,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "forest-west-trails"
+                    }
+                ]
+            }
+        ]
+    }
+]

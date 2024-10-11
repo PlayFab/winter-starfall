@@ -1,0 +1,42 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"node_modules": true,
+		"dist": true
+	},
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
+		"source.organizeImports": "always"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"emmet.showExpandedAbbreviation": "never",
+	"psi-header.config": {
+		"forceToTop": true,
+		"blankLinesAfter": 1,
+		"license": "Custom"
+	},
+	"psi-header.changes-tracking": {
+		"isActive": true,
+		"exclude": ["markdown", "json", "jsonc", "shellscript"],
+		"excludeGlob": ["./**/*/ignoreme.*", "**/settings.json"],
+		"autoHeader": "manualSave",
+		"enforceHeader": false
+	},
+	"psi-header.license-text": [
+		"Copyright (c) Microsoft Corporation. All rights reserved.",
+		"Licensed under the MIT License."
+	],
+	"psi-header.templates": [
+		{
+			"language": "*",
+			"template": ["<<licensetext>>"]
+		}
+	]
+}
