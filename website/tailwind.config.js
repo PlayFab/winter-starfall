@@ -4,10 +4,9 @@
  */
 
 /** @type {import('tailwindcss').Config} */
-const plugin = require("tailwindcss/plugin");
 
 export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+	content: ["./index.html", "./public/about.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
 			textShadow: {
@@ -49,17 +48,5 @@ export default {
 			},
 		},
 	},
-	plugins: [
-		require("@tailwindcss/forms"),
-		plugin(function ({ matchUtilities, theme }) {
-			matchUtilities(
-				{
-					"text-shadow": value => ({
-						textShadow: value,
-					}),
-				},
-				{ values: theme("textShadow") }
-			);
-		}),
-	],
+	plugins: [require("@tailwindcss/forms")],
 };
