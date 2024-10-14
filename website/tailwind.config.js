@@ -6,7 +6,14 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-	content: ["./index.html", "./public/about.html", "./src/**/*.{js,ts,jsx,tsx}"],
+	content: [
+		"./index.html",
+		"./public/about.html",
+		"./public/privacy.html",
+		"./public/terms.html",
+		"./public/404.html",
+		"./src/**/*.{js,ts,jsx,tsx}",
+	],
 	theme: {
 		extend: {
 			textShadow: {
