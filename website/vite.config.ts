@@ -22,13 +22,13 @@ export default defineConfig({
 				description: "PlayFab demo game showcasing Economy v2, Azure Functions, and more",
 				icons: [
 					{
-						src: "https://winterstarfall.azureedge.net/dist/assets/pwa/manifest-icon-512.maskable.png",
+						src: "https://winterstarfall.azureedge.net/assets/pwa/manifest-icon-512.maskable.png",
 						sizes: "512x512",
 						type: "image/png",
 						purpose: "any",
 					},
 					{
-						src: "https://winterstarfall.azureedge.net/dist/assets/pwa/manifest-icon-192.maskable.png",
+						src: "https://winterstarfall.azureedge.net/assets/pwa/manifest-icon-192.maskable.png",
 						sizes: "192x192",
 						type: "image/png",
 						purpose: "any",
