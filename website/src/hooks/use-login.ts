@@ -9,6 +9,7 @@ import { useIntl } from "react-intl";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { PlayFabError } from "..";
+import { facebookAppId, googleClientId, microsoftClientId } from "../main";
 import { siteSlice } from "../redux/slice-site";
 import { routes } from "../router";
 import { trackEvent } from "../shared/app-insights";
@@ -26,7 +27,6 @@ import {
 import Strings from "../strings";
 import { IFormHooks, useForm } from "./use-form";
 import { IPlayFabHooks, usePlayFab } from "./use-playfab";
-import { facebookAppId, googleClientId, microsoftClientId } from "../main";
 
 export interface IRegisterFormModel {
 	email: string;
@@ -54,18 +54,18 @@ interface IResults {
 
 const loginEventCount = 7;
 
-
-
 type Results = IResults & IFormHooks<IRegisterFormModel> & IPlayFabHooks;
 
 // Facebook login
-window.fbAsyncInit = function () {
-	FB.init({
-		appId: facebookAppId,
-		xfbml: true,
-		version: "v19.0",
-	});
-};
+if (!is.null(facebookAppId)) {
+	window.fbAsyncInit = function () {
+		FB.init({
+			appId: facebookAppId,
+			xfbml: true,
+			version: "v19.0",
+		});
+	};
+}
 
 export function useLogin(): Results {
 	const intl = useIntl();
@@ -224,6 +224,10 @@ export function useLogin(): Results {
 	);
 
 	useEffect(() => {
+		if (is.null(googleClientId)) {
+			return;
+		}
+
 		// Google login
 		try {
 			const client = google.accounts.oauth2.initTokenClient({
@@ -246,7 +250,7 @@ export function useLogin(): Results {
 
 			setGoogleClient(client);
 			setCanLoginWithGoogle(true);
-		} catch(problem) {
+		} catch (problem) {
 			console.error("Google account login error", problem);
 		}
 	}, [loginWithGoogle]);
