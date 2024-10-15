@@ -57,15 +57,13 @@ const loginEventCount = 7;
 type Results = IResults & IFormHooks<IRegisterFormModel> & IPlayFabHooks;
 
 // Facebook login
-if (!is.null(facebookAppId)) {
-	window.fbAsyncInit = function () {
-		FB.init({
-			appId: facebookAppId,
-			xfbml: true,
-			version: "v19.0",
-		});
-	};
-}
+window.fbAsyncInit = function () {
+	FB.init({
+		appId: facebookAppId,
+		xfbml: true,
+		version: "v19.0",
+	});
+};
 
 export function useLogin(): Results {
 	const intl = useIntl();
