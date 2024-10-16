@@ -13,6 +13,7 @@ import { is } from "../../shared/is";
 import { ILocation } from "../../shared/types";
 import { BackLink } from "../back-link";
 import { CinematicEventSwitch } from "../cinematics/events";
+import { WSMusicPlayer } from "../music";
 import { H1Left, PSubtitle } from "../tailwind";
 import { ExploreLocationAreaThumbnail } from "./area-thumbnail/layout-normal";
 import { ExploreLocationAreaThumbnailTight } from "./area-thumbnail/layout-tight";
@@ -58,6 +59,7 @@ export const ExploreLocation: React.FunctionComponent<IProps> = ({ location }) =
 				cinematicId={location?.backLink}
 				script={location?.script}
 			/>
+			<WSMusicPlayer />
 		</LocationSplitWithImage>
 	);
 };
@@ -82,7 +84,7 @@ const ExploreLocationLayout: React.FunctionComponent<IExploreLocationLayoutProps
 	switch (location?.layout) {
 		case "grid":
 			return (
-				<ul className="gap-4 grid grid-cols-2 mt-12">
+				<ul className="mt-12 grid grid-cols-2 gap-4">
 					{areas?.map(area => (
 						<li key={area.id}>
 							<ExploreLocationAreaThumbnailTight area={area} onClick={onSetArea} />

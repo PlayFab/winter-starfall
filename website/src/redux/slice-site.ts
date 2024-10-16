@@ -93,6 +93,8 @@ interface ISiteState {
 
 	// Cookies
 	siteConsent: any;
+
+	isMusicVisible: boolean;
 }
 
 const initialState: ISiteState = {
@@ -175,6 +177,7 @@ const initialState: ISiteState = {
 	},
 	isTheEnd: false,
 	siteConsent: null,
+	isMusicVisible: false,
 };
 
 export const siteSlice = createSlice({
@@ -197,6 +200,9 @@ export const siteSlice = createSlice({
 		},
 		cloud(state, action: PayloadAction<string>) {
 			state.cloud = action.payload;
+		},
+		isMusicVisible(state, action: PayloadAction<boolean>) {
+			state.isMusicVisible = action.payload;
 		},
 		loginSteps(state, action: PayloadAction<number>) {
 			for (let i = 0; i < action.payload; i++) {

@@ -40,9 +40,9 @@ export const PlayLearnMoreArea: React.FunctionComponent = () => {
 
 	return (
 		<>
-			<div className="bg-white shadow px-4 py-3 border border-border border-solid rounded-xl">
-				<div className="flex flex-nowrap justify-center items-center gap-4">
-					<div className="text-center basis-full sm:basis-auto">
+			<div className="rounded-xl border border-solid border-border bg-white px-4 py-3 shadow">
+				<div className="flex flex-nowrap items-center justify-center gap-4">
+					<div className="basis-full text-center sm:basis-auto">
 						<WSButton onClick={onPlay}>
 							<FormattedMessage id={Strings.sign_in_with} />
 						</WSButton>
@@ -53,15 +53,15 @@ export const PlayLearnMoreArea: React.FunctionComponent = () => {
 						</WSLink>
 					</div>
 				</div>
-				<ul className="flex flex-wrap justify-center gap-4 mt-2">
+				<ul className="mt-2 flex flex-wrap justify-center gap-4">
 					<li>
-						<WSLink to={routes.Privacy()} className="!text-gray-700 text-xs">
+						<WSLink to={routes.Privacy()} className="text-xs !text-gray-700">
 							<FormattedMessage id={Strings.privacy_policy_title} />
 						</WSLink>
 					</li>
 					{!is.production() && (
 						<li>
-							<WSLink to={routes.Editor()} className="!text-gray-700 text-xs">
+							<WSLink to={routes.Editor()} className="text-xs !text-gray-700">
 								Editor
 							</WSLink>
 						</li>
@@ -73,7 +73,7 @@ export const PlayLearnMoreArea: React.FunctionComponent = () => {
 				isOpen={isVisible(popup)}
 				isBlocking={false}
 				title={intl.formatMessage({ id: titleStringId })}>
-				<div className="xs:min-w-popup-2 xxs:min-w-popup-1">
+				<div className="xxs:min-w-popup-1 xs:min-w-popup-2">
 					<SocialLoginRunner loginMode={loginMode} onSetLogin={onSetLogin} onSetNone={onSetNone} />
 				</div>
 			</WSPopup>
