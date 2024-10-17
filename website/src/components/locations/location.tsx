@@ -13,7 +13,6 @@ import { is } from "../../shared/is";
 import { ILocation } from "../../shared/types";
 import { BackLink } from "../back-link";
 import { CinematicEventSwitch } from "../cinematics/events";
-import { WSMusicPlayer } from "../music";
 import { H1Left, PSubtitle } from "../tailwind";
 import { ExploreLocationAreaThumbnail } from "./area-thumbnail/layout-normal";
 import { ExploreLocationAreaThumbnailTight } from "./area-thumbnail/layout-tight";
@@ -59,7 +58,6 @@ export const ExploreLocation: React.FunctionComponent<IProps> = ({ location }) =
 				cinematicId={location?.backLink}
 				script={location?.script}
 			/>
-			<WSMusicPlayer />
 		</LocationSplitWithImage>
 	);
 };

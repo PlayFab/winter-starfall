@@ -11,7 +11,6 @@ import { ILocationArea, IPropsChildren } from "../../shared/types";
 import { BackLink } from "../back-link";
 import { Cinematic } from "../cinematics/cinematic";
 import { ExploreLocationAreaCombat } from "../combat/combat";
-import { WSMusicPlayer } from "../music";
 import { StoreSingle } from "../store/store-single";
 import { LocationSplitWithImage } from "./split-image";
 
@@ -38,7 +37,6 @@ export const ExploreLocationArea: React.FunctionComponent<IProps> = ({ area }) =
 					<div className="mt-4">
 						<StoreSingle storeName={area.store as string} description={area.description as string} />
 					</div>
-					<WSMusicPlayer />
 				</ExploreLocationAreaWrapper>
 			);
 		case 1:
@@ -47,7 +45,6 @@ export const ExploreLocationArea: React.FunctionComponent<IProps> = ({ area }) =
 					<div className="mt-4">
 						<ExploreLocationAreaCombat area={area} />
 					</div>
-					<WSMusicPlayer />
 				</ExploreLocationAreaWrapper>
 			);
 		case 2:
@@ -56,7 +53,6 @@ export const ExploreLocationArea: React.FunctionComponent<IProps> = ({ area }) =
 					<div className="mt-4">
 						<Cinematic script={area.script as string} />
 					</div>
-					<WSMusicPlayer />
 				</ExploreLocationAreaWrapper>
 			);
 	}
