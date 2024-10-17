@@ -71,6 +71,8 @@
 	"facebook": "Facebook",
 	"login_microsoft": "Sign in with Microsoft",
 	"error_passwords_match": "Your passwords must match.",
+	"music_toggle_show": "Show music player",
+	"music_toggle_hide": "Hide music player",
 
 	"weapon_singular": "Weapon",
 	"armor_singular": "Armor",
