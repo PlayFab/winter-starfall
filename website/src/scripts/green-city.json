@@ -1,219 +1,355 @@
 [
-	{
-		"id": "green-city-exterior-gates-1",
-		"events": [
-			{
-				"type": 1,
-				"text": "\"Welcome back, captain.\"",
-				"speaker": 104,
-				"messages": ["I take it the witch hunt was a success.", "This her?"]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 0,
-						"value": "green-city-exterior-gates-2"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-gates-2",
-		"events": [
-			{
-				"type": 1,
-				"speaker": 2,
-				"text": "\"Yeah, we found a -- we found one.\"",
-				"messages": [
-					"See that she is kept under a full watch at all times.",
-					"My soldiers and at least half a dozen more guards. Don't underestimate her.",
-					"But you won't be any trouble, will you?"
-				]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 0,
-						"value": "green-city-exterior-gates-3"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-gates-3",
-		"events": [
-			{
-				"type": 1,
-				"speaker": 0,
-				"text": "\"Wouldn't dream of it.\"",
-				"messages": ["I am the very soul of a humble, cooperative witch."]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 0,
-						"value": "green-city-exterior-gates-4"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-gates-4",
-		"events": [
-			{
-				"type": 0,
-				"thought": true,
-				"text": "Warren watches them leave"
-			},
-			{
-				"type": 2,
-				"image": "green-city-gates-sara-leaves",
-				"alt": "Sara Winter enters Anarta, escorted by several soldiers"
-			},
-			{
-				"type": 4,
-				"text": "Wait",
-				"loading": true,
-				"sequential": true,
-				"actions": [
-					{
-						"type": 5,
-						"value": "ProgressCheckpoint",
-						"argument": {
-							"checkpoint": "anarta"
-						}
-					},
-					{
-						"type": 8,
-						"value": 250
-					},
-					{
-						"type": 6,
-						"value": "party,completed"
-					},
-					{
-						"type": 7,
-						"value": "party"
-					},
-					{
-						"type": 12
-					},
-					[
-						{
-							"type": 2,
-							"value": "green-city-entrance-gates"
-						},
-						{
-							"type": 1,
-							"value": "green-city-entrance-nadia"
-						},
-						{
-							"type": 4,
-							"value": "green-city-entrance-nadia"
-						}
-					]
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-nadia-1",
-		"events": [
-			{
-				"type": 1,
-				"speaker": 1,
-				"text": "\"Hey! Hey! You... soldier!\"",
-				"messages": [
-					"You've got... the wrong person!",
-					"She's not! Not a witch.",
-					"I'm the... I'm out of breath. Whew. I'm the one you want.",
-					"Arrest me instead! Me! Me!"
-				]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 0,
-						"value": "green-city-exterior-nadia-2"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-nadia-2",
-		"events": [
-			{
-				"type": 1,
-				"speaker": 2,
-				"text": "\"How did you make it through the forest?\"",
-				"messages": [
-					"I don't need this. I just delivered an actual witch to justice.",
-					"She's not my problem anymore."
-				]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 0,
-						"value": "green-city-exterior-nadia-3"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-nadia-3",
-		"events": [
-			{
-				"type": 1,
-				"speaker": 1,
-				"text": "\"Shut up. SHUT UP!\"",
-				"messages": [
-					"That woman you took, Sara, where is she?",
-					"Did you already kill her? I'll burn you and this wretched city!"
-				]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 0,
-						"value": "green-city-exterior-nadia-4"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "green-city-exterior-nadia-4",
-		"events": [
-			{
-				"type": 1,
-				"speaker": 2,
-				"text": "\"Be quiet, child!\"",
-				"messages": [
-					"Sara is unharmed, held safely in the city's dungeons.",
-					"Walk with me, let's deflate your anger and your arrogance.",
-					"There's more that you don't know."
-				]
-			},
-			{
-				"type": 4,
-				"actions": [
-					{
-						"type": 100
-					}
-				]
-			}
-		]
-	}
+    {
+        "id": "green-city-exterior-gates-1",
+        "events": [
+            {
+                "type": 1,
+                "text": "\"Welcome back, captain.\"",
+                "speaker": 104,
+                "messages": [
+                    "I take it the witch hunt was a success.",
+                    "This her?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-exterior-gates-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-gates-2",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 2,
+                "text": "\"Yeah, we found a -- we found one.\"",
+                "messages": [
+                    "See that she is kept under a full watch at all times.",
+                    "My soldiers and at least half a dozen more guards. Don't underestimate her.",
+                    "But you won't be any trouble, will you?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-exterior-gates-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-gates-3",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 0,
+                "text": "\"Wouldn't dream of it.\"",
+                "messages": [
+                    "I am the very soul of a humble, cooperative witch."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-exterior-gates-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-gates-4",
+        "events": [
+            {
+                "type": 0,
+                "thought": true,
+                "text": "Warren watches them leave"
+            },
+            {
+                "type": 2,
+                "image": "green-city-gates-sara-leaves",
+                "alt": "Sara Winter enters Anarta, escorted by several soldiers"
+            },
+            {
+                "type": 4,
+                "text": "Wait",
+                "loading": true,
+                "sequential": true,
+                "actions": [
+                    {
+                        "type": 5,
+                        "value": "ProgressCheckpoint",
+                        "argument": {
+                            "checkpoint": "anarta"
+                        }
+                    },
+                    {
+                        "type": 8,
+                        "value": 250
+                    },
+                    {
+                        "type": 6,
+                        "value": "party,completed"
+                    },
+                    {
+                        "type": 7,
+                        "value": "party"
+                    },
+                    {
+                        "type": 12
+                    },
+                    [
+                        {
+                            "type": 2,
+                            "value": "green-city-entrance-gates"
+                        },
+                        {
+                            "type": 1,
+                            "value": "green-city-entrance-nadia"
+                        },
+                        {
+                            "type": 4,
+                            "value": "green-city-entrance-nadia"
+                        }
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-nadia-1",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 1,
+                "text": "\"Hey! Hey! You... soldier!\"",
+                "messages": [
+                    "You've got... the wrong person!",
+                    "She's not! Not a witch.",
+                    "I'm the... I'm out of breath. Whew. I'm the one you want.",
+                    "Arrest me instead! Me! Me!"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-exterior-nadia-2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-nadia-2",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 2,
+                "text": "\"How did you make it through the forest?\"",
+                "messages": [
+                    "I don't need this. I just delivered an actual witch to justice.",
+                    "She's not my problem anymore."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-exterior-nadia-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-nadia-3",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 1,
+                "text": "\"Shut up. SHUT UP!\"",
+                "messages": [
+                    "That woman you took, Sara, where is she?",
+                    "Did you already kill her? I'll burn you and this wretched city!"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-exterior-nadia-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-exterior-nadia-4",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 2,
+                "text": "\"Be quiet, child!\"",
+                "messages": [
+                    "Sara is unharmed, held safely in the city's dungeons.",
+                    "Walk with me, let's deflate your anger and your arrogance.",
+                    "There's more that you don't know."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 2,
+                        "value": "green-city-entrance-nadia"
+                    },
+                    {
+                        "type": 1,
+                        "value": "green-city-tavern"
+                    },
+                    {
+                        "type": 4,
+                        "value": "green-city-tavern"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-tavern-1",
+        "bubble": false,
+        "events": [
+            {
+                "type": 1,
+                "text": "\"What happened in the forest?\"",
+                "speaker": 1,
+                "messages": [
+                    "What was that explosion of magic?",
+                    "I felt it all the way in Bluefin Waters and started running.",
+                    "Hey, order me something, I'm famished."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-tavern-2"
+                    }
+                ]
+            }
+        ],
+        "watch": []
+    },
+    {
+        "id": "green-city-tavern-2",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 2,
+                "text": "\"A drop of mint?\"",
+                "messages": [
+                    "Sara drank from a bowl in an abandoned temple.",
+                    "It... turned her into a witch?",
+                    "Did you know that would happen?"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-tavern-3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-tavern-3",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 1,
+                "text": "\"Really? Really really?\"",
+                "messages": [
+                    "Wait, was it a silver bowl? About this big?",
+                    "Oh my goodness, oh my goodness!",
+                    "She can hear the Grove now! She can use our magic! I have to talk to her, there's so much to talk about!"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-tavern-4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-tavern-4",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 2,
+                "text": "\"Ugh, more talking.\"",
+                "messages": [
+                    "We have lots of time until the trial.",
+                    "There will be a investigation of whether or not she's a witch.",
+                    "I'm... sure it will be fair."
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 0,
+                        "value": "green-city-tavern-5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "green-city-tavern-5",
+        "events": [
+            {
+                "type": 1,
+                "speaker": 1,
+                "text": "\"They're going to kill her, you idiot!\"",
+                "messages": [
+                    "She wasn't a witch when you kidnapped her, but she is now, after you dragged her to that temple.",
+                    "You're going to be responsible for her execution! I'm not waiting.",
+                    "Come on! Get up!"
+                ]
+            },
+            {
+                "type": 4,
+                "actions": [
+                    {
+                        "type": 3,
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    }
 ]

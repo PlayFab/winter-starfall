@@ -1,467 +1,481 @@
 {
-	"map": [
-		"intro",
-		"fishing",
-		"forest",
-		"castle",
-		"river",
-		"mountains",
-		"plains",
-		"mine",
-		"desert",
-		"boneyard",
-		"capital"
-	],
-	"locations": [
-		{
-			"id": "intro",
-			"image": "intro",
-			"name": "Alone on the shore",
-			"description": "I don't like to think about how I got here. My yellow cape is filthy from the sea.",
-			"areas": [
-				{
-					"id": "intro-village",
-					"name": "Start walking",
-					"description": "There's some kind of fishing village in the distance. Can I make it before my legs give out?",
-					"image": "intro-village",
-					"type": 2,
-					"script": "intro",
-					"cinematic": "intro-village-1"
-				}
-			]
-		},
-		{
-			"id": "fishing",
-			"image": "fishing",
-			"name": "Bluefin Waters",
-			"description": "A narrow path through the forest connects this quiet hamlet to the capital.",
-			"areas": [
-				{
-					"type": 2,
-					"id": "nadias-house",
-					"name": "Nadia's House",
-					"description": "Every single flower and plant is in bloom simultaneously. Mint leaves grow on narrow paths. And the vegetables don't seem to be nibbled despite the lack of fences.",
-					"image": "nadias-house",
-					"script": "fishing",
-					"cinematic": "fishing-nadia-1"
-				},
-				{
-					"type": 0,
-					"id": "fishing-store",
-					"name": "The Bait and Basket",
-					"description": "Fishing rods, nets, and fresh bait are stocked to the ceiling. Fruits and vegetables look mouthwatering.",
-					"store": "fishing-store",
-					"image": "fishing-store",
-					"script": "fishing",
-					"cinematic": "fishing-store-1"
-				},
-				{
-					"type": 2,
-					"id": "fishing-dungeon-cinematic",
-					"name": "Soldiers on horseback",
-					"description": "A dozen riders emerge from the forest, pulling a large wooden cage. What do they want?",
-					"image": "fishing-dungeon-cinematic",
-					"script": "fishing",
-					"cinematic": "fishing-dungeon-prelude-1"
-				},
-				{
-					"type": 1,
-					"id": "fishing-dungeon",
-					"name": "Repel the soldiers",
-					"description": "Nadia faces off against the crowd of soldiers. Her eyes blaze.",
-					"image": "fishing-dungeon",
-					"enemyGroup": "fishing-dungeon-1",
-					"postCombatLocation": "fishing",
-					"postCombatArea": "fishing-dungeon-post"
-				},
-				{
-					"type": 2,
-					"id": "fishing-dungeon-post",
-					"name": "After the battle",
-					"description": "That cage is still there.",
-					"image": "fishing-dungeon-cinematic",
-					"script": "fishing",
-					"cinematic": "fishing-dungeon-post"
-				},
-				{
-					"type": 2,
-					"id": "fishing-cage",
-					"name": "Into the cage",
-					"description": "I must get to the capital.",
-					"image": "fishing-cage",
-					"script": "fishing",
-					"cinematic": "fishing-cage-1"
-				}
-			]
-		},
-		{
-			"id": "forest-west",
-			"image": "forest-west",
-			"name": "Western Song Forest",
-			"description": "Something is wrong here. Every animal is on edge. Birds are silent. Even the thorns seem to quiver.",
-			"areas": [
-				{
-					"type": 2,
-					"id": "forest-west-camp",
-					"name": "Stop for the night",
-					"description": "I sit patiently in my prison as Warren and his men prepare a campfire for the night. A small clearing offers respite from the oppressive woods.",
-					"image": "forest-west-camp",
-					"script": "forest-west",
-					"cinematic": "forest-west-camp-1"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-trails",
-					"name": "Rescue Warren's men",
-					"description": "Residual Solar magic trails lead deeper into the forest. I have to find his soldiers if I'm to make it out of here alive.",
-					"image": "forest-west-trails",
-					"script": "forest-west",
-					"cinematic": "forest-west-trails"
-				}
-			]
-		},
-		{
-			"id": "forest-west-maze",
-			"name": "Rescue Warren's men",
-			"image": "forest-west-maze-1",
-			"description": "The trails are fading. We must hurry.",
-			"layout": "grid",
-			"areas": [
-				{
-					"type": 2,
-					"id": "forest-west-maze-nw",
-					"name": "Northwest",
-					"description": "Mushrooms dot the logs.",
-					"image": "forest-west-trail-no-path-1",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-nw"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-ne",
-					"name": "Northeast",
-					"description": "Birds squawk unhappily.",
-					"image": "forest-west-trail-no-path-2",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-ne"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-sw",
-					"name": "Southwest",
-					"description": "Thick moss wraps the trees.",
-					"image": "forest-west-trail-no-path-3",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-sw"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-se",
-					"name": "Southeast",
-					"description": "Squirrels chase and chitter.",
-					"image": "forest-west-trail-no-path-4",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-se"
-				}
-			]
-		},
-		{
-			"id": "forest-west-maze-nw",
-			"name": "Western Song Forest, Northwest",
-			"image": "forest-west-trail-no-path-1",
-			"description": "The trails are fading. We must hurry.",
-			"script": "forest-west",
-			"backLink": "forest-west-maze-back",
-			"areas": [
-				{
-					"type": 2,
-					"id": "forest-west-maze-nw-1",
-					"name": "Thick mushroom patch",
-					"description": "I'm not sure what we'll find.",
-					"image": "forest-west-trail-no-path-7",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 1,
-					"id": "forest-west-maze-nw-2",
-					"name": "Behind those bushes",
-					"description": "I'm not sure what we'll find.",
-					"descriptionHover": "This way!",
-					"image": "forest-west-trail-no-path-6",
-					"imageHover": "forest-west-trail-path-1",
-					"script": "forest-west",
-					"enemyGroupProgression": "forest-west-maze",
-					"postCombatLocation": "forest-west-maze-nw",
-					"postCombatArea": "forest-west-maze-nw-2-over"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-nw-2-over",
-					"name": "Behind those bushes",
-					"description": "We found Shazim.",
-					"image": "forest-west-trail-path-1",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-nw-2-over-1"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-nw-3",
-					"name": "Center of a grove",
-					"description": "I'm not sure what we'll find.",
-					"image": "forest-west-trail-no-path-4",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-nw-4",
-					"name": "Past the fallen log",
-					"description": "I'm not sure what we'll find.",
-					"image": "forest-west-trail-no-path-5",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				}
-			]
-		},
-		{
-			"id": "forest-west-maze-ne",
-			"name": "Western Song Forest, Northeast",
-			"image": "forest-west-trail-no-path-2",
-			"description": "The trails are fading. We must hurry.",
-			"script": "forest-west",
-			"backLink": "forest-west-maze-back",
-			"areas": [
-				{
-					"type": 2,
-					"id": "forest-west-maze-ne-1",
-					"name": "Beneath a bird's nest",
-					"description": "Where are they?",
-					"image": "forest-west-trail-no-path-3",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-ne-2",
-					"name": "Over the trickling stream",
-					"description": "Where are they?",
-					"image": "forest-west-trail-no-path-2",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-ne-3",
-					"name": "Between the pines",
-					"description": "Where are they?",
-					"image": "forest-west-trail-no-path-6",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 1,
-					"id": "forest-west-maze-ne-4",
-					"name": "Under an oak's branches",
-					"description": "Where are they?",
-					"descriptionHover": "I've got it!",
-					"image": "forest-west-trail-no-path-1",
-					"imageHover": "forest-west-trail-path-2",
-					"script": "forest-west",
-					"enemyGroupProgression": "forest-west-maze",
-					"postCombatLocation": "forest-west-maze-ne",
-					"postCombatArea": "forest-west-maze-ne-4-over"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-ne-4-over",
-					"name": "Under an oak's branches",
-					"description": "Lochan's accounted for.",
-					"image": "forest-west-trail-path-2",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-ne-4-over-1"
-				}
-			]
-		},
-		{
-			"id": "forest-west-maze-sw",
-			"name": "Western Song Forest, Southwest",
-			"image": "forest-west-trail-no-path-3",
-			"description": "The trails are fading. We must hurry.",
-			"script": "forest-west",
-			"backLink": "forest-west-maze-back",
-			"areas": [
-				{
-					"type": 2,
-					"id": "forest-west-maze-sw-1",
-					"name": "Near those boulders",
-					"description": "This isn't my fault.",
-					"image": "forest-west-trail-no-path-2",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-sw-2",
-					"name": "Beside the reeds",
-					"description": "This isn't my fault.",
-					"image": "forest-west-trail-no-path-4",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 1,
-					"id": "forest-west-maze-sw-3",
-					"name": "Beyond the wildflowers",
-					"description": "This isn't my fault.",
-					"descriptionHover": "Here!",
-					"image": "forest-west-trail-no-path-1",
-					"imageHover": "forest-west-trail-path-3",
-					"script": "forest-west",
-					"enemyGroupProgression": "forest-west-maze",
-					"postCombatLocation": "forest-west-maze-sw",
-					"postCombatArea": "forest-west-maze-sw-3-over"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-sw-3-over",
-					"name": "Beyond the wildflowers",
-					"description": "Anaïs is safe.",
-					"image": "forest-west-trail-path-3",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-sw-3-over-1"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-sw-4",
-					"name": "Towards the small cliff",
-					"description": "This isn't my fault.",
-					"image": "forest-west-trail-no-path-6",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				}
-			]
-		},
-		{
-			"id": "forest-west-maze-se",
-			"name": "Western Song Forest, Southeast",
-			"image": "forest-west-trail-no-path-4",
-			"description": "The trails are fading. We must hurry.",
-			"script": "forest-west",
-			"backLink": "forest-west-maze-back",
-			"areas": [
-				{
-					"type": 1,
-					"id": "forest-west-maze-se-1",
-					"name": "A squirrel's den",
-					"description": "My responsibility. Mine.",
-					"descriptionHover": "I knew it!",
-					"image": "forest-west-trail-no-path-4",
-					"imageHover": "forest-west-trail-path-4",
-					"script": "forest-west",
-					"enemyGroupProgression": "forest-west-maze",
-					"postCombatLocation": "forest-west-maze-se",
-					"postCombatArea": "forest-west-maze-se-1-over"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-se-1-over",
-					"name": "A squirrel's den",
-					"description": "Ronald's rescued.",
-					"image": "forest-west-trail-path-4",
-					"script": "forest-west",
-					"cinematic": "forest-west-maze-se-1-over-1"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-se-2",
-					"name": "Over the mossy carpet",
-					"description": "My responsibility. Mine.",
-					"image": "forest-west-trail-no-path-2",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-se-3",
-					"name": "Past the tall bushes",
-					"description": "My responsibility. Mine.",
-					"image": "forest-west-trail-no-path-7",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-maze-se-4",
-					"name": "Large patch of dirt",
-					"description": "My responsibility. Mine.",
-					"image": "forest-west-trail-no-path-5",
-					"script": "forest-west",
-					"cinematicProgression": "forest-west-no-path"
-				}
-			]
-		},
-		{
-			"id": "forest-west-temple",
-			"name": "Western Song Forest, Temple",
-			"image": "forest-west-temple",
-			"description": "Even with everyone reuinted, we are lost. The forest is too dense. And yet we have discovered something.",
-			"areas": [
-				{
-					"type": 2,
-					"id": "forest-west-temple-interior",
-					"name": "Inside the temple",
-					"description": "Trees do not grow like this. The walls are covered in vines and moss.",
-					"image": "forest-west-temple-interior",
-					"script": "forest-west",
-					"cinematic": "forest-west-temple-interior-1"
-				},
-				{
-					"type": 1,
-					"id": "forest-west-temple-boss",
-					"name": "Inside the temple",
-					"description": "I cover my ears from the roaring. Something is coming.",
-					"image": "forest-west-temple-interior",
-					"enemyGroup": "forest-west-temple-boss",
-					"postCombatLocation": "forest-west-temple",
-					"postCombatArea": "forest-west-temple-boss-post"
-				},
-				{
-					"type": 2,
-					"id": "forest-west-temple-boss-post",
-					"name": "Inside the temple",
-					"description": "Birdsong erupts from the trees. Animals pour out of bushes and burrows.",
-					"image": "forest-west-temple-interior",
-					"script": "forest-west",
-					"cinematic": "forest-west-temple-boss-post-1"
-				}
-			]
-		},
-		{
-			"id": "green-city-entrance",
-			"name": "Anarta, The Green City",
-			"image": "green-city-exterior",
-			"description": "We stagger to the gates, filthy and exhausted from cutting through the forest.",
-			"areas": [
-				{
-					"type": 2,
-					"id": "green-city-entrance-gates",
-					"name": "Gatehouse",
-					"description": "Warren goes to speak to the guard. His soldiers surround me, hands on hilts.",
-					"image": "green-city-exterior-gates",
-					"script": "green-city",
-					"cinematic": "green-city-exterior-gates-1"
-				},
-				{
-					"type": 2,
-					"id": "green-city-entrance-nadia",
-					"name": "How did she find us?",
-					"description": "That witch from Bluefin Waters is at the gate, her eyes wide and red-rimmed.",
-					"image": "green-city-exterior-gates",
-					"script": "green-city",
-					"cinematic": "green-city-exterior-nadia-1"
-				}
-			]
-		}
-	]
+    "map": [
+        "intro",
+        "fishing",
+        "forest",
+        "castle",
+        "river",
+        "mountains",
+        "plains",
+        "mine",
+        "desert",
+        "boneyard",
+        "capital"
+    ],
+    "locations": [
+        {
+            "id": "intro",
+            "image": "intro",
+            "name": "Alone on the shore",
+            "description": "I don't like to think about how I got here. My yellow cape is filthy from the sea.",
+            "areas": [
+                {
+                    "id": "intro-village",
+                    "name": "Start walking",
+                    "description": "There's some kind of fishing village in the distance. Can I make it before my legs give out?",
+                    "image": "intro-village",
+                    "type": 2,
+                    "script": "intro",
+                    "cinematic": "intro-village-1"
+                }
+            ]
+        },
+        {
+            "id": "fishing",
+            "image": "fishing",
+            "name": "Bluefin Waters",
+            "description": "A narrow path through the forest connects this quiet hamlet to the capital.",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "nadias-house",
+                    "name": "Nadia's House",
+                    "description": "Every single flower and plant is in bloom simultaneously. Mint leaves grow on narrow paths. And the vegetables don't seem to be nibbled despite the lack of fences.",
+                    "image": "nadias-house",
+                    "script": "fishing",
+                    "cinematic": "fishing-nadia-1"
+                },
+                {
+                    "type": 0,
+                    "id": "fishing-store",
+                    "name": "The Bait and Basket",
+                    "description": "Fishing rods, nets, and fresh bait are stocked to the ceiling. Fruits and vegetables look mouthwatering.",
+                    "store": "fishing-store",
+                    "image": "fishing-store",
+                    "script": "fishing",
+                    "cinematic": "fishing-store-1"
+                },
+                {
+                    "type": 2,
+                    "id": "fishing-dungeon-cinematic",
+                    "name": "Soldiers on horseback",
+                    "description": "A dozen riders emerge from the forest, pulling a large wooden cage. What do they want?",
+                    "image": "fishing-dungeon-cinematic",
+                    "script": "fishing",
+                    "cinematic": "fishing-dungeon-prelude-1"
+                },
+                {
+                    "type": 1,
+                    "id": "fishing-dungeon",
+                    "name": "Repel the soldiers",
+                    "description": "Nadia faces off against the crowd of soldiers. Her eyes blaze.",
+                    "image": "fishing-dungeon",
+                    "enemyGroup": "fishing-dungeon-1",
+                    "postCombatLocation": "fishing",
+                    "postCombatArea": "fishing-dungeon-post"
+                },
+                {
+                    "type": 2,
+                    "id": "fishing-dungeon-post",
+                    "name": "After the battle",
+                    "description": "That cage is still there.",
+                    "image": "fishing-dungeon-cinematic",
+                    "script": "fishing",
+                    "cinematic": "fishing-dungeon-post"
+                },
+                {
+                    "type": 2,
+                    "id": "fishing-cage",
+                    "name": "Into the cage",
+                    "description": "I must get to the capital.",
+                    "image": "fishing-cage",
+                    "script": "fishing",
+                    "cinematic": "fishing-cage-1"
+                }
+            ]
+        },
+        {
+            "id": "forest-west",
+            "image": "forest-west",
+            "name": "Western Song Forest",
+            "description": "Something is wrong here. Every animal is on edge. Birds are silent. Even the thorns seem to quiver.",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "forest-west-camp",
+                    "name": "Stop for the night",
+                    "description": "I sit patiently in my prison as Warren and his men prepare a campfire for the night. A small clearing offers respite from the oppressive woods.",
+                    "image": "forest-west-camp",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-camp-1"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-trails",
+                    "name": "Rescue Warren's men",
+                    "description": "Residual Solar magic trails lead deeper into the forest. I have to find his soldiers if I'm to make it out of here alive.",
+                    "image": "forest-west-trails",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-trails"
+                }
+            ]
+        },
+        {
+            "id": "forest-west-maze",
+            "name": "Rescue Warren's men",
+            "image": "forest-west-maze-1",
+            "description": "The trails are fading. We must hurry.",
+            "layout": "grid",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-nw",
+                    "name": "Northwest",
+                    "description": "Mushrooms dot the logs.",
+                    "image": "forest-west-trail-no-path-1",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-nw"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-ne",
+                    "name": "Northeast",
+                    "description": "Birds squawk unhappily.",
+                    "image": "forest-west-trail-no-path-2",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-ne"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-sw",
+                    "name": "Southwest",
+                    "description": "Thick moss wraps the trees.",
+                    "image": "forest-west-trail-no-path-3",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-sw"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-se",
+                    "name": "Southeast",
+                    "description": "Squirrels chase and chitter.",
+                    "image": "forest-west-trail-no-path-4",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-se"
+                }
+            ]
+        },
+        {
+            "id": "forest-west-maze-nw",
+            "name": "Western Song Forest, Northwest",
+            "image": "forest-west-trail-no-path-1",
+            "description": "The trails are fading. We must hurry.",
+            "script": "forest-west",
+            "backLink": "forest-west-maze-back",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-nw-1",
+                    "name": "Thick mushroom patch",
+                    "description": "I'm not sure what we'll find.",
+                    "image": "forest-west-trail-no-path-7",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 1,
+                    "id": "forest-west-maze-nw-2",
+                    "name": "Behind those bushes",
+                    "description": "I'm not sure what we'll find.",
+                    "descriptionHover": "This way!",
+                    "image": "forest-west-trail-no-path-6",
+                    "imageHover": "forest-west-trail-path-1",
+                    "script": "forest-west",
+                    "enemyGroupProgression": "forest-west-maze",
+                    "postCombatLocation": "forest-west-maze-nw",
+                    "postCombatArea": "forest-west-maze-nw-2-over"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-nw-2-over",
+                    "name": "Behind those bushes",
+                    "description": "We found Shazim.",
+                    "image": "forest-west-trail-path-1",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-nw-2-over-1"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-nw-3",
+                    "name": "Center of a grove",
+                    "description": "I'm not sure what we'll find.",
+                    "image": "forest-west-trail-no-path-4",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-nw-4",
+                    "name": "Past the fallen log",
+                    "description": "I'm not sure what we'll find.",
+                    "image": "forest-west-trail-no-path-5",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                }
+            ]
+        },
+        {
+            "id": "forest-west-maze-ne",
+            "name": "Western Song Forest, Northeast",
+            "image": "forest-west-trail-no-path-2",
+            "description": "The trails are fading. We must hurry.",
+            "script": "forest-west",
+            "backLink": "forest-west-maze-back",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-ne-1",
+                    "name": "Beneath a bird's nest",
+                    "description": "Where are they?",
+                    "image": "forest-west-trail-no-path-3",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-ne-2",
+                    "name": "Over the trickling stream",
+                    "description": "Where are they?",
+                    "image": "forest-west-trail-no-path-2",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-ne-3",
+                    "name": "Between the pines",
+                    "description": "Where are they?",
+                    "image": "forest-west-trail-no-path-6",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 1,
+                    "id": "forest-west-maze-ne-4",
+                    "name": "Under an oak's branches",
+                    "description": "Where are they?",
+                    "descriptionHover": "I've got it!",
+                    "image": "forest-west-trail-no-path-1",
+                    "imageHover": "forest-west-trail-path-2",
+                    "script": "forest-west",
+                    "enemyGroupProgression": "forest-west-maze",
+                    "postCombatLocation": "forest-west-maze-ne",
+                    "postCombatArea": "forest-west-maze-ne-4-over"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-ne-4-over",
+                    "name": "Under an oak's branches",
+                    "description": "Lochan's accounted for.",
+                    "image": "forest-west-trail-path-2",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-ne-4-over-1"
+                }
+            ]
+        },
+        {
+            "id": "forest-west-maze-sw",
+            "name": "Western Song Forest, Southwest",
+            "image": "forest-west-trail-no-path-3",
+            "description": "The trails are fading. We must hurry.",
+            "script": "forest-west",
+            "backLink": "forest-west-maze-back",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-sw-1",
+                    "name": "Near those boulders",
+                    "description": "This isn't my fault.",
+                    "image": "forest-west-trail-no-path-2",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-sw-2",
+                    "name": "Beside the reeds",
+                    "description": "This isn't my fault.",
+                    "image": "forest-west-trail-no-path-4",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 1,
+                    "id": "forest-west-maze-sw-3",
+                    "name": "Beyond the wildflowers",
+                    "description": "This isn't my fault.",
+                    "descriptionHover": "Here!",
+                    "image": "forest-west-trail-no-path-1",
+                    "imageHover": "forest-west-trail-path-3",
+                    "script": "forest-west",
+                    "enemyGroupProgression": "forest-west-maze",
+                    "postCombatLocation": "forest-west-maze-sw",
+                    "postCombatArea": "forest-west-maze-sw-3-over"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-sw-3-over",
+                    "name": "Beyond the wildflowers",
+                    "description": "Anaïs is safe.",
+                    "image": "forest-west-trail-path-3",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-sw-3-over-1"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-sw-4",
+                    "name": "Towards the small cliff",
+                    "description": "This isn't my fault.",
+                    "image": "forest-west-trail-no-path-6",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                }
+            ]
+        },
+        {
+            "id": "forest-west-maze-se",
+            "name": "Western Song Forest, Southeast",
+            "image": "forest-west-trail-no-path-4",
+            "description": "The trails are fading. We must hurry.",
+            "script": "forest-west",
+            "backLink": "forest-west-maze-back",
+            "areas": [
+                {
+                    "type": 1,
+                    "id": "forest-west-maze-se-1",
+                    "name": "A squirrel's den",
+                    "description": "My responsibility. Mine.",
+                    "descriptionHover": "I knew it!",
+                    "image": "forest-west-trail-no-path-4",
+                    "imageHover": "forest-west-trail-path-4",
+                    "script": "forest-west",
+                    "enemyGroupProgression": "forest-west-maze",
+                    "postCombatLocation": "forest-west-maze-se",
+                    "postCombatArea": "forest-west-maze-se-1-over"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-se-1-over",
+                    "name": "A squirrel's den",
+                    "description": "Ronald's rescued.",
+                    "image": "forest-west-trail-path-4",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-maze-se-1-over-1"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-se-2",
+                    "name": "Over the mossy carpet",
+                    "description": "My responsibility. Mine.",
+                    "image": "forest-west-trail-no-path-2",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-se-3",
+                    "name": "Past the tall bushes",
+                    "description": "My responsibility. Mine.",
+                    "image": "forest-west-trail-no-path-7",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-maze-se-4",
+                    "name": "Large patch of dirt",
+                    "description": "My responsibility. Mine.",
+                    "image": "forest-west-trail-no-path-5",
+                    "script": "forest-west",
+                    "cinematicProgression": "forest-west-no-path"
+                }
+            ]
+        },
+        {
+            "id": "forest-west-temple",
+            "name": "Western Song Forest, Temple",
+            "image": "forest-west-temple",
+            "description": "Even with everyone reuinted, we are lost. The forest is too dense. And yet we have discovered something.",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "forest-west-temple-interior",
+                    "name": "Inside the temple",
+                    "description": "Trees do not grow like this. The walls are covered in vines and moss.",
+                    "image": "forest-west-temple-interior",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-temple-interior-1"
+                },
+                {
+                    "type": 1,
+                    "id": "forest-west-temple-boss",
+                    "name": "Inside the temple",
+                    "description": "I cover my ears from the roaring. Something is coming.",
+                    "image": "forest-west-temple-interior",
+                    "enemyGroup": "forest-west-temple-boss",
+                    "postCombatLocation": "forest-west-temple",
+                    "postCombatArea": "forest-west-temple-boss-post"
+                },
+                {
+                    "type": 2,
+                    "id": "forest-west-temple-boss-post",
+                    "name": "Inside the temple",
+                    "description": "Birdsong erupts from the trees. Animals pour out of bushes and burrows.",
+                    "image": "forest-west-temple-interior",
+                    "script": "forest-west",
+                    "cinematic": "forest-west-temple-boss-post-1"
+                }
+            ]
+        },
+        {
+            "id": "green-city-entrance",
+            "name": "Anarta, The Green City",
+            "image": "green-city-exterior",
+            "description": "We stagger to the gates, filthy and exhausted from cutting through the forest.",
+            "areas": [
+                {
+                    "type": 2,
+                    "id": "green-city-entrance-gates",
+                    "name": "Gatehouse",
+                    "description": "Warren goes to speak to the guard. His soldiers surround me, hands on hilts.",
+                    "image": "green-city-exterior-gates",
+                    "script": "green-city",
+                    "cinematic": "green-city-exterior-gates-1"
+                },
+                {
+                    "type": 2,
+                    "id": "green-city-entrance-nadia",
+                    "name": "How did she find us?",
+                    "description": "That witch from Bluefin Waters is at the gate, her eyes wide and red-rimmed.",
+                    "image": "green-city-exterior-gates",
+                    "script": "green-city",
+                    "cinematic": "green-city-exterior-nadia-1"
+                },
+                {
+                    "id": "green-city-tavern",
+                    "name": "Below Board",
+                    "description": "I'm not sure which of us is dragging the other here.",
+                    "descriptionHover": "",
+                    "script": "green-city",
+                    "backLink": "",
+                    "layout": "grid",
+                    "areas": [],
+                    "image": "green-city-tavern",
+                    "imageHover": "",
+                    "type": 2,
+                    "cinematic": "green-city-tavern-1"
+                }
+            ]
+        }
+    ]
 }

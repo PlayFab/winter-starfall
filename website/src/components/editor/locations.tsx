@@ -12,7 +12,7 @@ import { WSButton } from "../button";
 import { WSDropdown } from "../dropdown";
 import { H3Left } from "../tailwind";
 import { WSTextField } from "../text-field";
-import { EditorHeader } from "./header";
+import { EditorFooter, EditorHeader } from "./header";
 import { EditorPageContentLocationArea } from "./location/area";
 import { EditorPageContentLocationBase } from "./location/base";
 import { EditorFormFieldList, EditorMainList, EditorMainListItem } from "./styles";
@@ -204,6 +204,12 @@ export const EditorPageContentLocations: React.FunctionComponent<IEditorPageCont
 						</EditorMainListItem>
 					);
 				})}
+				<EditorFooter
+					title={intl.formatMessage({ id: Strings.editor_locations })}
+					newItemOnClick={() => onNewLocation(currentScript)}
+					newItemTitle={intl.formatMessage({ id: Strings.editor_new_location })}
+					onSave={onSave}
+				/>
 			</EditorMainList>
 		</>
 	);

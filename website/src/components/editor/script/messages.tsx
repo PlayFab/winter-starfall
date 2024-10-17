@@ -80,7 +80,7 @@ export const EditorPageContentScriptCinematicEventMessages: React.FunctionCompon
 				name="messages"
 				id={editorFieldId(cinematicId, eventIndex, "messages")}
 				value={event.messages?.join("\n") || ""}
-				rows={Math.max(2, event.messages?.length || 0)}
+				rows={Math.max(2, event.messages?.length + 1 || 0)}
 				onChange={(_, value) => onChange({ ...event, messages: (value as string).split("\n") }, eventIndex)}
 			/>
 			<WSCheckbox
