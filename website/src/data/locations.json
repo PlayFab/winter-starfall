@@ -464,7 +464,7 @@
                 {
                     "id": "green-city-tavern",
                     "name": "Below Board",
-                    "description": "I'm not sure which of us is dragging the other here.",
+                    "description": "I'm not sure which of us is dragging the other to this tavern.",
                     "descriptionHover": "",
                     "script": "green-city",
                     "backLink": "",
@@ -474,6 +474,20 @@
                     "imageHover": "",
                     "type": 2,
                     "cinematic": "green-city-tavern-1"
+                },
+                {
+                    "id": "green-city-store",
+                    "name": "General Store",
+                    "description": "I'm out of supplies after that trip. Someone needs to hear about the wolves we faced.",
+                    "descriptionHover": "",
+                    "script": "green-city",
+                    "backLink": "",
+                    "layout": "grid",
+                    "areas": [],
+                    "image": "green-city-store",
+                    "imageHover": "",
+                    "type": 2,
+                    "store": "green-city-store"
                 }
             ]
         }

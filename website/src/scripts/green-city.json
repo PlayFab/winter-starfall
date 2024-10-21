@@ -109,20 +109,18 @@
                     {
                         "type": 12
                     },
-                    [
-                        {
-                            "type": 2,
-                            "value": "green-city-entrance-gates"
-                        },
-                        {
-                            "type": 1,
-                            "value": "green-city-entrance-nadia"
-                        },
-                        {
-                            "type": 4,
-                            "value": "green-city-entrance-nadia"
-                        }
-                    ]
+                    {
+                        "type": 2,
+                        "value": "green-city-entrance-gates"
+                    },
+                    {
+                        "type": 1,
+                        "value": "green-city-entrance-nadia"
+                    },
+                    {
+                        "type": 4,
+                        "value": "green-city-entrance-nadia"
+                    }
                 ]
             }
         ]
@@ -223,8 +221,12 @@
                         "value": "green-city-tavern"
                     },
                     {
+                        "type": 1,
+                        "value": "green-city-store"
+                    },
+                    {
                         "type": 4,
-                        "value": "green-city-tavern"
+                        "value": ""
                     }
                 ]
             }
@@ -262,10 +264,10 @@
             {
                 "type": 1,
                 "speaker": 2,
-                "text": "\"A drop of mint?\"",
+                "text": "\"Fine. What do you eat?\"",
                 "messages": [
-                    "Sara drank from a bowl in an abandoned temple.",
-                    "It... turned her into a witch?",
+                    "Sara drank something from a bowl in an abandoned temple.",
+                    "It... turned her into a witch.",
                     "Did you know that would happen?"
                 ]
             },
@@ -290,7 +292,7 @@
                 "messages": [
                     "Wait, was it a silver bowl? About this big?",
                     "Oh my goodness, oh my goodness!",
-                    "She can hear the Grove now! She can use our magic! I have to talk to her, there's so much to talk about!"
+                    "She can feel the Grove now! She can use our magic! I have to talk to her, there's so much to talk about!"
                 ]
             },
             {
@@ -310,11 +312,11 @@
             {
                 "type": 1,
                 "speaker": 2,
-                "text": "\"Ugh, more talking.\"",
+                "text": "\"More talking?\"",
                 "messages": [
                     "We have lots of time until the trial.",
                     "There will be a investigation of whether or not she's a witch.",
-                    "I'm... sure it will be fair."
+                    "I'm... sure it will be fair. I'm sure."
                 ]
             },
             {
@@ -336,7 +338,7 @@
                 "speaker": 1,
                 "text": "\"They're going to kill her, you idiot!\"",
                 "messages": [
-                    "She wasn't a witch when you kidnapped her, but she is now, after you dragged her to that temple.",
+                    "She wasn't a witch when you kidnapped her. But she is now, after you dragged her to that temple.",
                     "You're going to be responsible for her execution! I'm not waiting.",
                     "Come on! Get up!"
                 ]
@@ -345,7 +347,7 @@
                 "type": 4,
                 "actions": [
                     {
-                        "type": 3,
+                        "type": 4,
                         "value": ""
                     }
                 ]
