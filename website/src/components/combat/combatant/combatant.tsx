@@ -60,11 +60,13 @@ export const CombatCombatant: React.FunctionComponent<IProps> = ({
 			character = characters.find(c => c.id === combatant.id)!;
 			hp = character.hp as number;
 			name = getCharacterName(character.id, intl);
+			description = name;
 			image = getCharacterImageUrl(character.id, "combat");
 			break;
 		case CombatantType.Guest:
 			guest = guests.find(c => c.id === combatant.id)!;
 			hp = guest.hp;
+			description = name;
 			name = getCharacterName(guest.id, intl);
 			image = getCharacterImageUrl(guest.id, "combat");
 			break;

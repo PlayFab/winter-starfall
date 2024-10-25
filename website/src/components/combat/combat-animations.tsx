@@ -31,7 +31,7 @@ export const CombatAnimations: React.FunctionComponent<IProps> = ({
 
 	return (
 		<div ref={scope}>
-			<div className="grid grid-cols-2 gap-4">
+			<div className="gap-4 grid grid-cols-2">
 				<div>
 					<ul className="flex flex-wrap gap-6">
 						{characters.map(c => (
@@ -100,7 +100,13 @@ export const CombatAnimations: React.FunctionComponent<IProps> = ({
 					</ul>
 				</div>
 			</div>
-			<img id="spell-effect" className="absolute left-0 top-0 h-16 w-16 opacity-0" src={spellEffectImageUri} />
+			<img
+				id="spell-effect"
+				className="top-0 left-0 absolute opacity-0 w-16 h-16"
+				src={spellEffectImageUri}
+				alt=""
+				role="presentation"
+			/>
 		</div>
 	);
 };
