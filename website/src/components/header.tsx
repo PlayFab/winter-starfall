@@ -41,7 +41,7 @@ export const Header: React.FunctionComponent = () => {
 		if (!isPlayFabActivityVisible) {
 			trackEvent({ name: "Playfab activity sidebar opened" });
 		}
-	}, [isPlayFabActivityVisible]);
+	}, [isPlayFabActivityVisible, setIsPlayFabActivityVisible]);
 
 	return (
 		<>

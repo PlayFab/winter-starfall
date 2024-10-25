@@ -3,10 +3,10 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "editor",
+			"script": "dev",
 			"problemMatcher": [],
-			"label": "npm: editor",
-			"detail": "npm run editor",
+			"label": "npm: dev",
+			"detail": "npm run dev",
 			"group": {
 				"kind": "build",
 				"isDefault": true
