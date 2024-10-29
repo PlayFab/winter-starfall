@@ -1,44 +1,81 @@
-/*
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License.
- */
+import { is } from "../shared/is";
 
-import React, { PropsWithChildren } from "react";
-import { useDispatch } from "react-redux";
-import { siteSlice } from "../redux/slice-site";
+let siteConsent: WcpConsent.SiteConsent;
+let enableAnalyticsCallback: () => void;
+let updateReduxStore: (isRequired: boolean) => void;
 
-declare let WcpConsent: any;
+// Initialize cookies
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+window.WcpConsent &&
+	WcpConsent.init(
+		"en-US",
+		"cookie-banner",
+		(error, _siteConsent) => {
+			if (error) {
+				console.error(error);
+			} else {
+				siteConsent = _siteConsent!;
 
-let siteConsent: any;
-
-const WcpCookiesProvider: React.FunctionComponent<PropsWithChildren> = ({ children }) => {
-	const dispatch = useDispatch();
-
-	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-	WcpConsent &&
-		WcpConsent.init(
-			"en-US",
-			"cookie-banner",
-			(err: any, _siteConsent: any) => {
-				if (!err) {
-					siteConsent = _siteConsent!;
-					dispatch(siteSlice.actions.siteConsent(siteConsent));
+				if (!is.null(updateReduxStore)) {
+					updateReduxStore(siteConsent.isConsentRequired);
 				}
-			},
-			onConsentChanged
-		);
+			}
+		},
+		onConsentChanged
+	);
 
-	return <>{children}</>;
-};
+function acceptsThirdPartyAnalytics(): boolean {
+	return siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics);
+}
 
-const onConsentChanged = () => {
-	window.location.reload();
-};
+// callback method when consent is changed by user
+function onConsentChanged() {
+	if (acceptsThirdPartyAnalytics() && !is.null(enableAnalyticsCallback)) {
+		enableAnalyticsCallback();
+	}
 
-const manageConsent = () => {
+	if (!is.null(updateReduxStore)) {
+		updateReduxStore(siteConsent.isConsentRequired);
+	}
+}
+
+function manageConsent() {
 	siteConsent.manageConsent();
+}
+
+// Test if the cookie consent library has been loaded.
+function isAvailable(): boolean {
+	return typeof siteConsent !== "undefined";
+}
+
+// Test if we have been granted consent to use cookies.
+function doesUserAcceptAnalytics(): boolean {
+	// If we don't have the MSCC cookie JS code loaded we don't know if the user
+	// has consented to cookies or not.
+	if (!isAvailable()) {
+		return false;
+	}
+
+	return acceptsThirdPartyAnalytics();
+}
+
+// Register the passed function to be called when we are granted consent to use cookies.
+function onCookieConsentChanged(callbackEnable: () => void): void {
+	enableAnalyticsCallback = callbackEnable;
+}
+
+function setReduxStore(reduxFunction: (isRequired: boolean) => void): void {
+	updateReduxStore = reduxFunction;
+
+	if (isAvailable()) {
+		updateReduxStore(siteConsent.isConsentRequired);
+	}
+}
+
+export const cookie = {
+	isAvailable,
+	doesUserAcceptAnalytics,
+	onConsentChanged: onCookieConsentChanged,
+	manageConsent,
+	setReduxStore,
 };
-
-const hasAnalyticsConsent = () => siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics);
-
-export { hasAnalyticsConsent, manageConsent, WcpCookiesProvider };

@@ -92,7 +92,7 @@ interface ISiteState {
 	isTheEnd: boolean;
 
 	// Cookies
-	siteConsent: any;
+	doesUserAcceptAnalytics: boolean;
 }
 
 const initialState: ISiteState = {
@@ -174,7 +174,7 @@ const initialState: ISiteState = {
 		progressions: [],
 	},
 	isTheEnd: false,
-	siteConsent: null,
+	doesUserAcceptAnalytics: false,
 };
 
 export const siteSlice = createSlice({
@@ -184,8 +184,8 @@ export const siteSlice = createSlice({
 		locale(state, action: PayloadAction<string>) {
 			state.locale = validateLocale(action.payload);
 		},
-		siteConsent(state, action: PayloadAction<any>) {
-			state.siteConsent = action.payload;
+		doesUserAcceptAnalytics(state, action: PayloadAction<boolean>) {
+			state.doesUserAcceptAnalytics = action.payload;
 		},
 		titleId(state, action: PayloadAction<string>) {
 			if (!is.null(action.payload)) {
