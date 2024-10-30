@@ -2,6 +2,7 @@ import { is } from "../shared/is";
 
 let siteConsent: WcpConsent.SiteConsent;
 let enableAnalyticsCallback: () => void;
+let disableAnalyticsCallback: () => void;
 
 // Initialize cookies
 function init() {
@@ -29,8 +30,14 @@ function acceptsThirdPartyAnalytics(): boolean {
 
 // callback method when consent is changed by user
 function onConsentChanged() {
-	if (acceptsThirdPartyAnalytics() && !is.null(enableAnalyticsCallback)) {
-		enableAnalyticsCallback();
+	if (acceptsThirdPartyAnalytics()) {
+		if (!is.null(enableAnalyticsCallback)) {
+			enableAnalyticsCallback();
+		}
+	} else {
+		if (!is.null(disableAnalyticsCallback)) {
+			disableAnalyticsCallback();
+		}
 	}
 }
 
@@ -55,8 +62,13 @@ function doesUserAcceptAnalytics(): boolean {
 }
 
 // Register the passed function to be called when we are granted consent to use cookies.
-function onCookieConsentChanged(callbackEnable: () => void): void {
+function onCookieConsentChanged(callbackEnable: () => void, callbackDisable: () => void): void {
 	enableAnalyticsCallback = callbackEnable;
+	disableAnalyticsCallback = callbackDisable;
+}
+
+function isConsentRequired(): boolean {
+	return isAvailable() && siteConsent.isConsentRequired;
 }
 
 export const cookie = {
@@ -65,4 +77,5 @@ export const cookie = {
 	doesUserAcceptAnalytics,
 	onConsentChanged: onCookieConsentChanged,
 	manageConsent,
+	isConsentRequired,
 };

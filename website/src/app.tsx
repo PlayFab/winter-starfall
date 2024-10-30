@@ -11,14 +11,14 @@ import { PlayFabActivityPopup } from "./components/playfab/popup";
 import { LocaleProvider } from "./locale";
 import store from "./redux/store";
 import { Router } from "./router";
-import { initApplicationInsights } from "./shared/app-insights";
+import { initApplicationInsights, unloadApplicationInsights } from "./shared/app-insights";
 
 initializeIcons("./fluent-icons/");
 
 export const App: React.FunctionComponent = () => {
 	useEffect(() => {
 		cookie.init();
-		cookie.onConsentChanged(initApplicationInsights);
+		cookie.onConsentChanged(initApplicationInsights, unloadApplicationInsights);
 
 		if (cookie.doesUserAcceptAnalytics()) {
 			initApplicationInsights();

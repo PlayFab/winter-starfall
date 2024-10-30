@@ -156,12 +156,12 @@ export function useHeader(): IResults {
 			},
 		];
 
-		if (cookie.isAvailable()) {
+		if (cookie.isConsentRequired()) {
 			navigationStart.push({
 				key: "cookie",
 				text: intl.formatMessage({ id: Strings.manage_cookies }),
 				onClick: () => cookie.manageConsent(),
-				iconProps: { iconName: "Cookie" },
+				iconProps: { iconName: "ContactCardSettings" },
 			});
 		}
 
