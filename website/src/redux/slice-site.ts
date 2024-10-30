@@ -90,9 +90,6 @@ interface ISiteState {
 	currentCinematic: string;
 	cinematicData: ILocalDataCinematics;
 	isTheEnd: boolean;
-
-	// Cookies
-	siteConsent: any;
 }
 
 const initialState: ISiteState = {
@@ -174,7 +171,6 @@ const initialState: ISiteState = {
 		progressions: [],
 	},
 	isTheEnd: false,
-	siteConsent: null,
 };
 
 export const siteSlice = createSlice({
@@ -183,9 +179,6 @@ export const siteSlice = createSlice({
 	reducers: {
 		locale(state, action: PayloadAction<string>) {
 			state.locale = validateLocale(action.payload);
-		},
-		siteConsent(state, action: PayloadAction<any>) {
-			state.siteConsent = action.payload;
 		},
 		titleId(state, action: PayloadAction<string>) {
 			if (!is.null(action.payload)) {
