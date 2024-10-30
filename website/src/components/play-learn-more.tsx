@@ -66,7 +66,7 @@ export const PlayLearnMoreArea: React.FunctionComponent = () => {
 						<li>
 							<WSButton
 								style="link"
-								onClick={() => cookie.manageConsent()}
+								onClick={() => cookie.onManageConsent()}
 								className={subtleLinkClassName}>
 								<FormattedMessage id={Strings.manage_cookies} />
 							</WSButton>

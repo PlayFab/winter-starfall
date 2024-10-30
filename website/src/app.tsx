@@ -17,12 +17,7 @@ initializeIcons("./fluent-icons/");
 
 export const App: React.FunctionComponent = () => {
 	useEffect(() => {
-		cookie.init();
-		cookie.onConsentChanged(initApplicationInsights, unloadApplicationInsights);
-
-		if (cookie.doesUserAcceptAnalytics()) {
-			initApplicationInsights();
-		}
+		cookie.init(initApplicationInsights, unloadApplicationInsights);
 	}, []);
 
 	return (

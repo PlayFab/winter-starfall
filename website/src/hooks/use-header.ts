@@ -160,7 +160,7 @@ export function useHeader(): IResults {
 			navigationStart.push({
 				key: "cookie",
 				text: intl.formatMessage({ id: Strings.manage_cookies }),
-				onClick: () => cookie.manageConsent(),
+				onClick: () => cookie.onManageConsent(),
 				iconProps: { iconName: "ContactCardSettings" },
 			});
 		}

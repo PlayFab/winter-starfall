@@ -1,14 +1,23 @@
 import { is } from "../shared/is";
 
+let isInitialized = false;
 let siteConsent: WcpConsent.SiteConsent;
 let enableAnalyticsCallback: () => void;
 let disableAnalyticsCallback: () => void;
 
 // Initialize cookies
-function init() {
+function init(callbackEnable: () => void, callbackDisable: () => void) {
+	enableAnalyticsCallback = callbackEnable;
+	disableAnalyticsCallback = callbackDisable;
+
 	if (is.null(window.WcpConsent)) {
 		return;
 	}
+
+	if (isInitialized) {
+		return;
+	}
+	isInitialized = true;
 
 	window.WcpConsent.init(
 		"en-US",
@@ -16,21 +25,24 @@ function init() {
 		(error, _siteConsent) => {
 			if (error) {
 				console.error(error);
+				return;
 			} else {
 				siteConsent = _siteConsent!;
 			}
+
+			onConsentChanged();
 		},
 		onConsentChanged
 	);
 }
 
-function acceptsThirdPartyAnalytics(): boolean {
+function areAnalyticsAllowed(): boolean {
 	return siteConsent.getConsentFor(window.WcpConsent.consentCategories.Analytics);
 }
 
 // callback method when consent is changed by user
 function onConsentChanged() {
-	if (acceptsThirdPartyAnalytics()) {
+	if (areAnalyticsAllowed()) {
 		if (!is.null(enableAnalyticsCallback)) {
 			enableAnalyticsCallback();
 		}
@@ -41,30 +53,13 @@ function onConsentChanged() {
 	}
 }
 
-function manageConsent() {
+function onManageConsent() {
 	siteConsent.manageConsent();
 }
 
 // Test if the cookie consent library has been loaded.
 function isAvailable(): boolean {
 	return typeof siteConsent !== "undefined";
-}
-
-// Test if we have been granted consent to use cookies.
-function doesUserAcceptAnalytics(): boolean {
-	// If we don't have the MSCC cookie JS code loaded we don't know if the user
-	// has consented to cookies or not.
-	if (!isAvailable()) {
-		return false;
-	}
-
-	return acceptsThirdPartyAnalytics();
-}
-
-// Register the passed function to be called when we are granted consent to use cookies.
-function onCookieConsentChanged(callbackEnable: () => void, callbackDisable: () => void): void {
-	enableAnalyticsCallback = callbackEnable;
-	disableAnalyticsCallback = callbackDisable;
 }
 
 function isConsentRequired(): boolean {
@@ -74,8 +69,6 @@ function isConsentRequired(): boolean {
 export const cookie = {
 	init,
 	isAvailable,
-	doesUserAcceptAnalytics,
-	onConsentChanged: onCookieConsentChanged,
-	manageConsent,
+	onManageConsent,
 	isConsentRequired,
 };
