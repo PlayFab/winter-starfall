@@ -2,12 +2,14 @@ import { is } from "../shared/is";
 
 let siteConsent: WcpConsent.SiteConsent;
 let enableAnalyticsCallback: () => void;
-let updateReduxStore: (isRequired: boolean) => void;
 
 // Initialize cookies
-// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-window.WcpConsent &&
-	WcpConsent.init(
+function init() {
+	if (is.null(window.WcpConsent)) {
+		return;
+	}
+
+	window.WcpConsent.init(
 		"en-US",
 		"cookie-banner",
 		(error, _siteConsent) => {
@@ -15,27 +17,20 @@ window.WcpConsent &&
 				console.error(error);
 			} else {
 				siteConsent = _siteConsent!;
-
-				if (!is.null(updateReduxStore)) {
-					updateReduxStore(siteConsent.isConsentRequired);
-				}
 			}
 		},
 		onConsentChanged
 	);
+}
 
 function acceptsThirdPartyAnalytics(): boolean {
-	return siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics);
+	return siteConsent.getConsentFor(window.WcpConsent.consentCategories.Analytics);
 }
 
 // callback method when consent is changed by user
 function onConsentChanged() {
 	if (acceptsThirdPartyAnalytics() && !is.null(enableAnalyticsCallback)) {
 		enableAnalyticsCallback();
-	}
-
-	if (!is.null(updateReduxStore)) {
-		updateReduxStore(siteConsent.isConsentRequired);
 	}
 }
 
@@ -64,18 +59,10 @@ function onCookieConsentChanged(callbackEnable: () => void): void {
 	enableAnalyticsCallback = callbackEnable;
 }
 
-function setReduxStore(reduxFunction: (isRequired: boolean) => void): void {
-	updateReduxStore = reduxFunction;
-
-	if (isAvailable()) {
-		updateReduxStore(siteConsent.isConsentRequired);
-	}
-}
-
 export const cookie = {
+	init,
 	isAvailable,
 	doesUserAcceptAnalytics,
 	onConsentChanged: onCookieConsentChanged,
 	manageConsent,
-	setReduxStore,
 };
