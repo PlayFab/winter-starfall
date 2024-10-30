@@ -22,7 +22,6 @@ const browserHistory = createBrowserHistory();
 let _appInsights: ApplicationInsights | null;
 
 export function initApplicationInsights() {
-	console.log("Starting app insights");
 	const config: IConfiguration = {
 		extensions: [reactPlugin],
 		extensionConfig: {

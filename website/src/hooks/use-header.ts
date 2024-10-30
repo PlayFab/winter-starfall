@@ -10,6 +10,7 @@ import { useIntl } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { PlayFabError } from "..";
+import { cookie } from "../components/cookies";
 import { AppState } from "../redux/reducer";
 import { playfabSlice } from "../redux/slice-playfab";
 import { siteSlice } from "../redux/slice-site";
@@ -133,7 +134,7 @@ export function useHeader(): IResults {
 	}
 
 	const playerNavigation = useMemo<IContextualMenuItem[]>(() => {
-		return [
+		const navigationStart: IContextualMenuItem[] = [
 			{
 				key: "save-icon",
 				text: saveText,
@@ -149,10 +150,22 @@ export function useHeader(): IResults {
 			},
 			{
 				key: "reset",
-				text: "Reset player",
+				text: intl.formatMessage({ id: Strings.reset_player }),
 				onClick: () => show(reset),
 				iconProps: { iconName: "EraseTool" },
 			},
+		];
+
+		if (cookie.isAvailable()) {
+			navigationStart.push({
+				key: "cookie",
+				text: intl.formatMessage({ id: Strings.manage_cookies }),
+				onClick: () => cookie.manageConsent(),
+				iconProps: { iconName: "Cookie" },
+			});
+		}
+
+		const navigationEnd: IContextualMenuItem[] = [
 			{
 				key: "logout",
 				text: intl.formatMessage({ id: Strings.logout }),
@@ -160,6 +173,8 @@ export function useHeader(): IResults {
 				iconProps: { iconName: "SignOut" },
 			},
 		];
+
+		return navigationStart.concat(navigationEnd);
 	}, [intl, onClearPlayFabId, onSave, saveDisabled, saveIcon, saveText, show]);
 
 	const setIsPlayFabActivityVisible = useCallback(
