@@ -71,6 +71,8 @@ enum Strings {
 	error_passwords_match = "error_passwords_match",
 	reset_player = "reset_player",
 	manage_cookies = "manage_cookies",
+	music_toggle_show = "music_toggle_show",
+	music_toggle_hide = "music_toggle_hide",
 	weapon_singular = "weapon_singular",
 	armor_singular = "armor_singular",
 	weapons = "weapons",

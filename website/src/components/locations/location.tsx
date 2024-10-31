@@ -82,7 +82,7 @@ const ExploreLocationLayout: React.FunctionComponent<IExploreLocationLayoutProps
 	switch (location?.layout) {
 		case "grid":
 			return (
-				<ul className="gap-4 grid grid-cols-2 mt-12">
+				<ul className="mt-12 grid grid-cols-2 gap-4">
 					{areas?.map(area => (
 						<li key={area.id}>
 							<ExploreLocationAreaThumbnailTight area={area} onClick={onSetArea} />

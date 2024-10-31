@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import { ExploreLocationArea } from "../components/locations/area";
 import { ExploreLocation } from "../components/locations/location";
 import { ExploreTheEnd } from "../components/locations/the-end";
+import { WSMusicPlayer } from "../components/music";
 import { Page } from "../components/page";
 import { AppState } from "../redux/reducer";
 import { is } from "../shared/is";
@@ -20,6 +21,7 @@ export const ExplorePage: React.FunctionComponent = () => {
 
 	return (
 		<Page title={intl.formatMessage({ id: Strings.nav_explore })}>
+			<WSMusicPlayer />
 			<ExplorePageContent />
 		</Page>
 	);

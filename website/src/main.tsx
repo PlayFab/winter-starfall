@@ -6,7 +6,8 @@
 import { PublicClientApplication } from "@azure/msal-browser";
 import { MsalProvider } from "@azure/msal-react";
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+import "react-h5-audio-player/lib/styles.css";
 import { App } from "./app.tsx";
 import "./index.css";
 
@@ -22,7 +23,7 @@ const msalInstance = new PublicClientApplication({
 });
 await msalInstance.initialize();
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
 		<MsalProvider instance={msalInstance}>
 			<App />

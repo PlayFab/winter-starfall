@@ -27,9 +27,9 @@ export const LocationSplitWithImage: React.FunctionComponent<IProps> = ({ childr
 
 	return (
 		<div className="relative">
-			<div className="lg:flex lg:justify-between xl:justify-end mx-auto lg:px-8 max-w-site">
-				<div className="xl:right-1/2 lg:flex lg:w-1/2 lg:shrink xl:absolute xl:inset-y-0 lg:grow-0 xl:w-1/2">
-					<div className="relative lg:-ml-8 xl:ml-0 lg:w-full h-80 lg:h-auto lg:grow">
+			<div className="mx-auto max-w-site lg:flex lg:justify-between lg:px-8 xl:justify-end">
+				<div className="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
+					<div className="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
 						<img
 							src={getLocationImageUrl(location?.image as string, "full")}
 							alt={location?.description}
@@ -38,7 +38,7 @@ export const LocationSplitWithImage: React.FunctionComponent<IProps> = ({ childr
 					</div>
 				</div>
 				<div className="px-3 sm:px-6 lg:contents">
-					<div className="lg:flex-none mx-auto lg:mr-0 lg:ml-8 pb-12 lg:w-full xl:w-1/2 max-w-2xl lg:max-w-lg">
+					<div className="mx-auto max-w-2xl pb-12 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none xl:w-1/2">
 						<Header />
 						<div className="sm:py-20">{children}</div>
 					</div>

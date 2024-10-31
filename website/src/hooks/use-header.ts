@@ -24,13 +24,15 @@ interface IResults {
 	canSeePartyTab: boolean;
 	error: PlayFabError | undefined;
 	isLoading: boolean;
+	isPlayFabActivityVisible: boolean;
 	isResetPopupVisible: boolean;
 	isTitleNewsPopupVisible: boolean;
+	isMusicVisible: boolean;
 	onHideResetPopup: () => void;
 	onHideTitleNewsPopup: () => void;
 	onResetPlayer: () => void;
+	onToggleIsMusicVisible: () => void;
 	playerNavigation: IContextualMenuItem[];
-	isPlayFabActivityVisible: boolean;
 	setIsPlayFabActivityVisible: (isVisible: boolean) => void;
 }
 
@@ -48,6 +50,7 @@ export function useHeader(): IResults {
 		useSelector((state: AppState) => state.site.userDataReadOnly.completed.checkpoints)?.find(c => c === "party")
 	);
 	const isPlayFabActivityVisible = useSelector((state: AppState) => state.playfab.isVisible);
+	const isMusicVisible = useSelector((state: AppState) => state.site.isMusicVisible);
 	const lastSaved = useSelector((state: AppState) => state.site.lastSavedPlayerData);
 	const loginProgress = useSelector((state: AppState) => state.site.loginProgress);
 	const playFabId = useSelector((state: AppState) => state.site.playFabId);
@@ -85,6 +88,10 @@ export function useHeader(): IResults {
 	const onHideTitleNewsPopup = useCallback(() => {
 		hide(news);
 	}, [hide]);
+
+	const onToggleIsMusicVisible = useCallback(() => {
+		dispatch(siteSlice.actions.isMusicVisible(!isMusicVisible));
+	}, [dispatch, isMusicVisible]);
 
 	const onSave = useCallback(() => {
 		if (!canSave) {
@@ -194,7 +201,9 @@ export function useHeader(): IResults {
 		onHideResetPopup,
 		onHideTitleNewsPopup,
 		onResetPlayer,
+		onToggleIsMusicVisible,
 		playerNavigation,
 		setIsPlayFabActivityVisible,
+		isMusicVisible,
 	};
 }

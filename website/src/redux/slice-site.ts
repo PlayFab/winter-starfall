@@ -90,6 +90,8 @@ interface ISiteState {
 	currentCinematic: string;
 	cinematicData: ILocalDataCinematics;
 	isTheEnd: boolean;
+
+	isMusicVisible: boolean;
 }
 
 const initialState: ISiteState = {
@@ -171,6 +173,7 @@ const initialState: ISiteState = {
 		progressions: [],
 	},
 	isTheEnd: false,
+	isMusicVisible: false,
 };
 
 export const siteSlice = createSlice({
@@ -190,6 +193,9 @@ export const siteSlice = createSlice({
 		},
 		cloud(state, action: PayloadAction<string>) {
 			state.cloud = action.payload;
+		},
+		isMusicVisible(state, action: PayloadAction<boolean>) {
+			state.isMusicVisible = action.payload;
 		},
 		loginSteps(state, action: PayloadAction<number>) {
 			for (let i = 0; i < action.payload; i++) {
