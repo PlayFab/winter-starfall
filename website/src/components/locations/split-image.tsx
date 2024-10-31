@@ -10,7 +10,6 @@ import { getLocationImageUrl } from "../../shared/helpers";
 import { is } from "../../shared/is";
 import { ILocationBase, IPropsChildren } from "../../shared/types";
 import { Header } from "../header";
-import { WSMusicPlayer } from "../music";
 
 interface IProps extends IPropsChildren {
 	location: ILocationBase | undefined;
@@ -41,7 +40,6 @@ export const LocationSplitWithImage: React.FunctionComponent<IProps> = ({ childr
 				<div className="px-3 sm:px-6 lg:contents">
 					<div className="mx-auto max-w-2xl pb-12 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none xl:w-1/2">
 						<Header />
-						<WSMusicPlayer />
 						<div className="sm:py-20">{children}</div>
 					</div>
 				</div>
