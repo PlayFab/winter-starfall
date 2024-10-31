@@ -127,13 +127,13 @@ const PlayFabActivityListItem: React.FunctionComponent<{ event: IPlayFabEvent }>
 	let apiColorClassName = "bg-gray-700";
 	switch (apiNameShort) {
 		case "Client":
-			apiColorClassName = "bg-sky-500";
+			apiColorClassName = "bg-sky-700";
 			break;
 		case "Economy":
-			apiColorClassName = "bg-emerald-500";
+			apiColorClassName = "bg-emerald-700";
 			break;
 		case "CloudScript":
-			apiColorClassName = "bg-fuchsia-500";
+			apiColorClassName = "bg-fuchsia-700";
 			break;
 	}
 

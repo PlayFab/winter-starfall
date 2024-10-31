@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+import { ReactPlugin } from "@microsoft/applicationinsights-react-js";
 import {
 	ApplicationInsights,
 	IConfiguration,
@@ -9,6 +10,9 @@ import {
 	IPageViewTelemetry,
 	ITraceTelemetry,
 } from "@microsoft/applicationinsights-web";
+import { createBrowserHistory } from "history";
+const reactPlugin = new ReactPlugin();
+const browserHistory = createBrowserHistory();
 
 // ***********************************************************************************************************
 // NPM Initialization
@@ -17,10 +21,15 @@ import {
 // Cache the previously initialized instance to avoid creating multiple instances
 let _appInsights: ApplicationInsights | null;
 
-export function initApplicationInsights(config?: IConfiguration) {
+export function initApplicationInsights() {
+	const config: IConfiguration = {
+		extensions: [reactPlugin],
+		extensionConfig: {
+			[reactPlugin.identifier]: { history: browserHistory },
+		},
+	};
+
 	if (!_appInsights) {
-		// Make sure we have a configuration object
-		config = config || {};
 		if (!config.instrumentationKey || !config.connectionString) {
 			config.connectionString =
 				"InstrumentationKey=92ee4b99-bd8e-4bec-b609-9733da727512;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://westus.livediagnostics.monitor.azure.com/;ApplicationId=ecba56ad-6fd2-4a95-8d3e-5c8ec4250ea6";
@@ -146,71 +155,3 @@ export function getCookieMgr() {
 	}
 	return null;
 }
-
-/**
- * An example of customized pageview item
- */
-export const samplePageviewItem = {
-	name: "pageviewWithproperities", // Defaults to the document title
-	uri: "https://pageview",
-	refUri: "https://sample",
-	pageType: "type",
-	isLoggedIn: false,
-	properties: {
-		duration: 100, // pre-defined property
-		prop: "prop",
-		prop1: { prop1: "prop1" },
-	},
-	measurements: {
-		metric: 1,
-	},
-} as IPageViewTelemetry;
-
-/**
- * An example of customized event item
- */
-export const sampleEventItem = {
-	name: "eventWithproperities",
-	properties: {
-		prop: { prop1: "prop1" },
-	},
-	measurements: {
-		metirc: 1,
-	},
-} as IEventTelemetry;
-
-/**
- * An example of customized trace item
- */
-export const sampleTraceItem = {
-	message: "trace",
-	SeverityLevel: 1,
-	properties: {
-		prop: { prop1: "prop1" },
-	},
-	measurements: {
-		metirc: 1,
-	},
-} as ITraceTelemetry;
-
-/**
- * An example of customized metric item
- */
-export const sampleMetricItem = {
-	name: "metric",
-	average: 1.2,
-	//default to 1
-	sampleCount: 2,
-	//default to average
-	min: 1,
-	//default to average
-	max: 2,
-	// default to 0
-	stdDev: 1.23,
-	properties: {
-		prop: { prop1: "prop1" },
-	},
-	measurements: {
-		metirc: 1,
-	},
-} as IMetricTelemetry;

@@ -23,7 +23,7 @@ export default {
 			},
 			colors: {
 				html: "#FFFDEC",
-				link: "#147DC4",
+				link: "#1376ba",
 				"link-light": "#3894D2",
 				"link-pale": "#E7F1F7",
 				border: "rgb(212 212 212)",

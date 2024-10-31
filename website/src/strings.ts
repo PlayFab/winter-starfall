@@ -69,6 +69,8 @@ enum Strings {
 	facebook = "facebook",
 	login_microsoft = "login_microsoft",
 	error_passwords_match = "error_passwords_match",
+	reset_player = "reset_player",
+	manage_cookies = "manage_cookies",
 	music_toggle_show = "music_toggle_show",
 	music_toggle_hide = "music_toggle_hide",
 	weapon_singular = "weapon_singular",

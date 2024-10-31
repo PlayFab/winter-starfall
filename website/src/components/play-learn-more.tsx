@@ -11,6 +11,7 @@ import { routes } from "../router";
 import { is } from "../shared/is";
 import Strings from "../strings";
 import { WSButton } from "./button";
+import { cookie } from "./cookies";
 import { WSLink } from "./link";
 import { SocialLoginRunner } from "./login/runner";
 import { WSPopup } from "./popups";
@@ -38,6 +39,8 @@ export const PlayLearnMoreArea: React.FunctionComponent = () => {
 		}
 	}, [loginMode]);
 
+	const subtleLinkClassName = "text-xs !text-gray-700";
+
 	return (
 		<>
 			<div className="rounded-xl border border-solid border-border bg-white px-4 py-3 shadow">
@@ -55,13 +58,23 @@ export const PlayLearnMoreArea: React.FunctionComponent = () => {
 				</div>
 				<ul className="mt-2 flex flex-wrap justify-center gap-4">
 					<li>
-						<WSLink to={routes.Privacy()} className="text-xs !text-gray-700">
+						<WSLink to={routes.Privacy()} className={subtleLinkClassName}>
 							<FormattedMessage id={Strings.privacy_policy_title} />
 						</WSLink>
 					</li>
+					{cookie.isConsentRequired() && (
+						<li>
+							<WSButton
+								style="link"
+								onClick={() => cookie.onManageConsent()}
+								className={subtleLinkClassName}>
+								<FormattedMessage id={Strings.manage_cookies} />
+							</WSButton>
+						</li>
+					)}
 					{!is.production() && (
 						<li>
-							<WSLink to={routes.Editor()} className="text-xs !text-gray-700">
+							<WSLink to={routes.Editor()} className={subtleLinkClassName}>
 								Editor
 							</WSLink>
 						</li>
