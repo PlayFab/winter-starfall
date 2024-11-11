@@ -13,7 +13,7 @@ import "./index.css";
 
 export const facebookAppId = "";
 export const googleClientId = "1006886579566-psdcimf1u3qbsl7rb9doof62ob0eq8ot.apps.googleusercontent.com";
-export const microsoftClientId = "d406de5e-eaa5-4c0a-aa64-bded00ce2b93";
+export const microsoftClientId = "";
 
 // Microsoft Authentication Library (MSAL) configuration
 const msalInstance = new PublicClientApplication({
