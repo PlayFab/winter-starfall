@@ -10,6 +10,7 @@ import { useIntl } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { PlayFabError } from "..";
+import { cookie } from "../components/cookies";
 import { AppState } from "../redux/reducer";
 import { playfabSlice } from "../redux/slice-playfab";
 import { siteSlice } from "../redux/slice-site";
@@ -23,13 +24,15 @@ interface IResults {
 	canSeePartyTab: boolean;
 	error: PlayFabError | undefined;
 	isLoading: boolean;
+	isPlayFabActivityVisible: boolean;
 	isResetPopupVisible: boolean;
 	isTitleNewsPopupVisible: boolean;
+	isMusicVisible: boolean;
 	onHideResetPopup: () => void;
 	onHideTitleNewsPopup: () => void;
 	onResetPlayer: () => void;
+	onToggleIsMusicVisible: () => void;
 	playerNavigation: IContextualMenuItem[];
-	isPlayFabActivityVisible: boolean;
 	setIsPlayFabActivityVisible: (isVisible: boolean) => void;
 }
 
@@ -47,6 +50,7 @@ export function useHeader(): IResults {
 		useSelector((state: AppState) => state.site.userDataReadOnly.completed.checkpoints)?.find(c => c === "party")
 	);
 	const isPlayFabActivityVisible = useSelector((state: AppState) => state.playfab.isVisible);
+	const isMusicVisible = useSelector((state: AppState) => state.site.isMusicVisible);
 	const lastSaved = useSelector((state: AppState) => state.site.lastSavedPlayerData);
 	const loginProgress = useSelector((state: AppState) => state.site.loginProgress);
 	const playFabId = useSelector((state: AppState) => state.site.playFabId);
@@ -84,6 +88,10 @@ export function useHeader(): IResults {
 	const onHideTitleNewsPopup = useCallback(() => {
 		hide(news);
 	}, [hide]);
+
+	const onToggleIsMusicVisible = useCallback(() => {
+		dispatch(siteSlice.actions.isMusicVisible(!isMusicVisible));
+	}, [dispatch, isMusicVisible]);
 
 	const onSave = useCallback(() => {
 		if (!canSave) {
@@ -133,7 +141,7 @@ export function useHeader(): IResults {
 	}
 
 	const playerNavigation = useMemo<IContextualMenuItem[]>(() => {
-		return [
+		const navigationStart: IContextualMenuItem[] = [
 			{
 				key: "save-icon",
 				text: saveText,
@@ -149,10 +157,22 @@ export function useHeader(): IResults {
 			},
 			{
 				key: "reset",
-				text: "Reset player",
+				text: intl.formatMessage({ id: Strings.reset_player }),
 				onClick: () => show(reset),
 				iconProps: { iconName: "EraseTool" },
 			},
+		];
+
+		if (cookie.isConsentRequired()) {
+			navigationStart.push({
+				key: "cookie",
+				text: intl.formatMessage({ id: Strings.manage_cookies }),
+				onClick: () => cookie.onManageConsent(),
+				iconProps: { iconName: "ContactCardSettings" },
+			});
+		}
+
+		const navigationEnd: IContextualMenuItem[] = [
 			{
 				key: "logout",
 				text: intl.formatMessage({ id: Strings.logout }),
@@ -160,6 +180,8 @@ export function useHeader(): IResults {
 				iconProps: { iconName: "SignOut" },
 			},
 		];
+
+		return navigationStart.concat(navigationEnd);
 	}, [intl, onClearPlayFabId, onSave, saveDisabled, saveIcon, saveText, show]);
 
 	const setIsPlayFabActivityVisible = useCallback(
@@ -179,7 +201,9 @@ export function useHeader(): IResults {
 		onHideResetPopup,
 		onHideTitleNewsPopup,
 		onResetPlayer,
+		onToggleIsMusicVisible,
 		playerNavigation,
 		setIsPlayFabActivityVisible,
+		isMusicVisible,
 	};
 }

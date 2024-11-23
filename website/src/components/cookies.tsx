@@ -1,44 +1,74 @@
-/*
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License.
- */
+import { is } from "../shared/is";
 
-import React, { PropsWithChildren } from "react";
-import { useDispatch } from "react-redux";
-import { siteSlice } from "../redux/slice-site";
+let isInitialized = false;
+let siteConsent: WcpConsent.SiteConsent;
+let enableAnalyticsCallback: () => void;
+let disableAnalyticsCallback: () => void;
 
-declare let WcpConsent: any;
+// Initialize cookies
+function init(callbackEnable: () => void, callbackDisable: () => void) {
+	enableAnalyticsCallback = callbackEnable;
+	disableAnalyticsCallback = callbackDisable;
 
-let siteConsent: any;
+	if (is.null(window.WcpConsent)) {
+		return;
+	}
 
-const WcpCookiesProvider: React.FunctionComponent<PropsWithChildren> = ({ children }) => {
-	const dispatch = useDispatch();
+	if (isInitialized) {
+		return;
+	}
+	isInitialized = true;
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-	WcpConsent &&
-		WcpConsent.init(
-			"en-US",
-			"cookie-banner",
-			(err: any, _siteConsent: any) => {
-				if (!err) {
-					siteConsent = _siteConsent!;
-					dispatch(siteSlice.actions.siteConsent(siteConsent));
-				}
-			},
-			onConsentChanged
-		);
+	window.WcpConsent.init(
+		"en-US",
+		"cookie-banner",
+		(error, _siteConsent) => {
+			if (error) {
+				console.error(error);
+				return;
+			} else {
+				siteConsent = _siteConsent!;
+			}
 
-	return <>{children}</>;
-};
+			onConsentChanged();
+		},
+		onConsentChanged
+	);
+}
 
-const onConsentChanged = () => {
-	window.location.reload();
-};
+function areAnalyticsAllowed(): boolean {
+	return siteConsent.getConsentFor(window.WcpConsent.consentCategories.Analytics);
+}
 
-const manageConsent = () => {
+// callback method when consent is changed by user
+function onConsentChanged() {
+	if (areAnalyticsAllowed()) {
+		if (!is.null(enableAnalyticsCallback)) {
+			enableAnalyticsCallback();
+		}
+	} else {
+		if (!is.null(disableAnalyticsCallback)) {
+			disableAnalyticsCallback();
+		}
+	}
+}
+
+function onManageConsent() {
 	siteConsent.manageConsent();
+}
+
+// Test if the cookie consent library has been loaded.
+function isAvailable(): boolean {
+	return typeof siteConsent !== "undefined";
+}
+
+function isConsentRequired(): boolean {
+	return isAvailable() && siteConsent.isConsentRequired;
+}
+
+export const cookie = {
+	init,
+	isAvailable,
+	onManageConsent,
+	isConsentRequired,
 };
-
-const hasAnalyticsConsent = () => siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics);
-
-export { hasAnalyticsConsent, manageConsent, WcpCookiesProvider };

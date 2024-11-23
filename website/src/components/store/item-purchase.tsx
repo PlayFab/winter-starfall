@@ -102,6 +102,7 @@ export const StoreItemPurchase: React.FunctionComponent<IStorePurchaseProps> = (
 								label={intl.formatMessage({ id: Strings.quantity })}
 								type="number"
 								name="quantity"
+								id="quantity"
 								min={1}
 								value={quantity.toString()}
 								onChange={onChange}

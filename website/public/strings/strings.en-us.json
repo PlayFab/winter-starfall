@@ -71,6 +71,10 @@
 	"facebook": "Facebook",
 	"login_microsoft": "Sign in with Microsoft",
 	"error_passwords_match": "Your passwords must match.",
+	"reset_player": "Reset player",
+	"manage_cookies": "Manage cookies",
+	"music_toggle_show": "Show music player",
+	"music_toggle_hide": "Hide music player",
 
 	"weapon_singular": "Weapon",
 	"armor_singular": "Armor",

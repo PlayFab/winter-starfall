@@ -91,8 +91,7 @@ interface ISiteState {
 	cinematicData: ILocalDataCinematics;
 	isTheEnd: boolean;
 
-	// Cookies
-	siteConsent: any;
+	isMusicVisible: boolean;
 }
 
 const initialState: ISiteState = {
@@ -174,7 +173,7 @@ const initialState: ISiteState = {
 		progressions: [],
 	},
 	isTheEnd: false,
-	siteConsent: null,
+	isMusicVisible: false,
 };
 
 export const siteSlice = createSlice({
@@ -183,9 +182,6 @@ export const siteSlice = createSlice({
 	reducers: {
 		locale(state, action: PayloadAction<string>) {
 			state.locale = validateLocale(action.payload);
-		},
-		siteConsent(state, action: PayloadAction<any>) {
-			state.siteConsent = action.payload;
 		},
 		titleId(state, action: PayloadAction<string>) {
 			if (!is.null(action.payload)) {
@@ -197,6 +193,9 @@ export const siteSlice = createSlice({
 		},
 		cloud(state, action: PayloadAction<string>) {
 			state.cloud = action.payload;
+		},
+		isMusicVisible(state, action: PayloadAction<boolean>) {
+			state.isMusicVisible = action.payload;
 		},
 		loginSteps(state, action: PayloadAction<number>) {
 			for (let i = 0; i < action.payload; i++) {

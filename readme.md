@@ -2,7 +2,7 @@
 
 This is an [Azure PlayFab](https://www.playfab.com) demo game showcasing Economy v2, Azure Functions, and more.
 
-Play this game at [winterstarfall.azureedge.net](https://winterstarfall.azureedge.net/).
+Play this game at [winterstarfall.com](https://www.winterstarfall.com/).
 
 If you have a free PlayFab developer account, you can [view this title in Game Manager](https://developer.playfab.com/en-us/F8941/dashboard).
 
@@ -68,38 +68,9 @@ Then modify `website\src\main.tsx` with the appropriate client IDs.
 -   **Google:** [Integrating Google Sign-In into your web app](https://developers.google.com/identity/sign-in/web/sign-in)
 -   **Facebook:** [Facebook Login for the Web with the JavaScript SDK](https://developers.facebook.com/docs/facebook-login/web)
 
-<!--
-# Running inside PlayFab Game Manager
-
-This game is designed to run by itself either locally or on a static site.
-
-When running inside PlayFab Game Manager, make the following changes:
-
--   In `website/vite.config.ts`, add this at the root
-    ```js
-    base: "/WinterStarfall",
-    ```
--   In `website/src/app.tsx`, change
-
-    ```js
-    // From
-    initializeIcons("./fluent-icons/");
-
-    // To
-    initializeIcons("/WinterStarfall/fluent-icons/");
-    ```
-
--   In `website/src/locale.tsx`, change
-
-    ```js
-    // From
-    fetch(`/strings/strings.${locale}.json`);
-
-    // To
-    fetch(`/WinterStarfall/strings/strings.${locale}.json`);
-    ```
--->
+See how social logins work using the Azure version of this game at [winterstarfall.azureedge.net](https://winterstarfall.azureedge.net/).
 
 # Contact
 
 -   **Email:** <a href="mailto:jordan.roher@microsoft.com">Jordan Roher</a>
+-   **Discord:** [PlayFab Community](https://discord.com/invite/msftgamedev)
