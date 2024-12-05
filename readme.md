@@ -68,7 +68,7 @@ Then modify `website\src\main.tsx` with the appropriate client IDs.
 -   **Google:** [Integrating Google Sign-In into your web app](https://developers.google.com/identity/sign-in/web/sign-in)
 -   **Facebook:** [Facebook Login for the Web with the JavaScript SDK](https://developers.facebook.com/docs/facebook-login/web)
 
-See how social logins work using the Azure version of this game at [winterstarfall.azureedge.net](https://winterstarfall.azureedge.net/).
+See how social logins work using the Azure version of this game at [winterstarfall-dahcguh9cadta5dh.z02.azurefd.net](https://winterstarfall-dahcguh9cadta5dh.z02.azurefd.net/).
 
 # Contact
 
