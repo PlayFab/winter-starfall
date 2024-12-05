@@ -12,7 +12,7 @@ import { App } from "./app.tsx";
 import "./index.css";
 
 export const facebookAppId = "";
-export const googleClientId = "1006886579566-psdcimf1u3qbsl7rb9doof62ob0eq8ot.apps.googleusercontent.com";
+export const googleClientId = "";
 export const microsoftClientId = "";
 
 // Microsoft Authentication Library (MSAL) configuration
