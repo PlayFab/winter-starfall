@@ -6,6 +6,8 @@ Play this game at [winterstarfall.com](https://www.winterstarfall.com/).
 
 If you have a free PlayFab developer account, you can [view this title in Game Manager](https://developer.playfab.com/en-us/F8941/dashboard).
 
+To use a Microsoft or Google account, play Winter Starfall at [winterstarfall-unofficial.com](https://www.winterstarfall-unofficial.com/).
+
 # Website
 
 ## Prerequisites
