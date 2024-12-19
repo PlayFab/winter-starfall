@@ -36,4 +36,4 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "winter-starfall-cdn" --name "winterstarfall" --resource-group "winter-starfall-resources"
+            az cdn endpoint purge --content-paths  "/*" --profile-name "winterstarfall-cdn-standard" --name "winterstarfall-unofficial" --resource-group "winter-starfall-resources"
