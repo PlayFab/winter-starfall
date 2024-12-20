@@ -97,9 +97,9 @@ const AboutPageFeature: React.FunctionComponent = () => {
 		<div className="py-12">
 			<div className="mx-auto px-6 lg:px-8 max-w-7xl">
 				<div className="mx-auto max-w-2xl lg:text-center">
-					<p className="mt-2 font-bold text-3xl text-gray-900 sm:text-4xl tracking-tight">
+					<h1 className="mt-2 font-bold text-3xl text-gray-900 sm:text-4xl tracking-tight">
 						<FormattedMessage id={Strings.about_title} />
-					</p>
+					</h1>
 					<p className="mt-6 text-gray-600 text-lg leading-8">
 						<FormattedMessage id={Strings.about_subtitle} />
 					</p>
@@ -124,24 +124,24 @@ const AboutPageFeature: React.FunctionComponent = () => {
 					</ul>
 				</div>
 				<div className="mx-auto mt-16 sm:mt-20 lg:mt-24 max-w-2xl lg:max-w-4xl">
-					<dl className="gap-x-8 gap-y-10 lg:gap-y-16 grid grid-cols-1 lg:grid-cols-2 max-w-xl lg:max-w-none">
+					<ul className="gap-x-8 gap-y-10 lg:gap-y-16 grid grid-cols-1 lg:grid-cols-2 max-w-xl lg:max-w-none">
 						{features.map(feature => (
-							<div key={feature.name} className="relative pl-16">
-								<dt className="font-semibold text-base text-gray-900 leading-7">
-									<div className="-top-1 left-0 absolute flex justify-center items-center w-12 h-12">
+							<li key={feature.name} className="relative pl-16">
+								<h2 className="font-semibold text-base text-gray-900 leading-7">
+									<span className="-top-1 left-0 absolute flex justify-center items-center w-12 h-12">
 										<WSIcon
 											icon={feature.icon}
 											className="w-12 h-12 text-link"
 											size={30}
 											aria-hidden
 										/>
-									</div>
+									</span>
 									{feature.name}
-								</dt>
-								<dd className="mt-2 text-base text-gray-600 leading-7">{feature.description}</dd>
-							</div>
+								</h2>
+								<p className="mt-2 text-base text-gray-600 leading-7">{feature.description}</p>
+							</li>
 						))}
-					</dl>
+					</ul>
 				</div>
 			</div>
 		</div>
