@@ -19,6 +19,7 @@ import { trackEvent } from "../shared/app-insights";
 import { is } from "../shared/is";
 import { links } from "../shared/links";
 import gameLogoTextDark from "../static/logo-text-dark.png";
+import gameLogoTextForcedColors from "../static/logo-text-forced-colors.png";
 import playFabLogo from "../static/playfab-logo.png";
 import Strings from "../strings";
 
@@ -35,7 +36,7 @@ export const AboutPage: React.FunctionComponent = () => {
 				<div className="flex justify-center gap-12">
 					<Link to={routes.Index()}>
 						<img
-							src={gameLogoTextDark}
+							src={is.forcedColorsActive() ? gameLogoTextForcedColors : gameLogoTextDark}
 							alt={intl.formatMessage({ id: Strings.site_title })}
 							className="h-32"
 						/>

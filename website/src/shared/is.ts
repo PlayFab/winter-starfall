@@ -183,6 +183,10 @@ function MicrosoftEmail(email: string): boolean {
 	return possibleMicrosoftDomains.some(domain => email.endsWith(`@${domain}`));
 }
 
+function ForcedColorsActive(): boolean {
+	return window.matchMedia("(forced-colors: active)").matches;
+}
+
 export const is = {
 	array: IsArray,
 	arrayDifferent: IsArrayDifferent,
@@ -204,4 +208,5 @@ export const is = {
 	touchDevice: TouchDevice,
 	standalone: Standalone,
 	microsoftEmail: MicrosoftEmail,
+	forcedColorsActive: ForcedColorsActive,
 };
