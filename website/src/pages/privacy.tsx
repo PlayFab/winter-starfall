@@ -32,7 +32,7 @@ export const PrivacyPage: React.FunctionComponent = () => {
 				<H1Left>
 					<FormattedMessage id={Strings.privacy_policy_title} />
 				</H1Left>
-				<h1>Attachment — The Standard Contractual Clauses (Processors)</h1>
+				<h2>Attachment — The Standard Contractual Clauses (Processors)</h2>
 				<p>
 					Acceptance of the PlayFab Terms of Service by you (as data exporter) includes acceptance of this
 					Attachment, which is countersigned by PlayFab, Inc. Capitalized terms that are not defined herein

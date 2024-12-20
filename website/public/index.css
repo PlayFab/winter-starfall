@@ -56,7 +56,7 @@
 	--tw-contain-size: ;
 	--tw-contain-layout: ;
 	--tw-contain-paint: ;
-	--tw-contain-style: 
+	--tw-contain-style:   
 ;
 }
 
@@ -111,7 +111,7 @@
 	--tw-contain-size: ;
 	--tw-contain-layout: ;
 	--tw-contain-paint: ;
-	--tw-contain-style: 
+	--tw-contain-style:   
 ;
 }
 
@@ -2235,9 +2235,15 @@ body {
 }
 
 div.markdown p,
-div.privacy p {
+main.privacy p {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+
+main.privacy a {
+	margin-left: 0.25rem;
+	color: #1376ba;
+	text-decoration: underline;
 }
 
 .placeholder\:text-gray-400::-moz-placeholder {

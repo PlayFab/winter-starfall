@@ -98,14 +98,15 @@ export const Page: React.FunctionComponent<IProps> = ({
 					shouldHaveTopPadding ? "xl:pb-16 xl:pt-8" : "",
 					useBackgroundKeyArt ? "xl:overflow-y-hidden" : ""
 				)}>
-				<div
+				<main
 					className={combineClassNames(
 						contentWrapperClassNameBase,
 						contentWrapperClassNameShouldHaveTopPadding,
 						contentWrapperClassNameUseBackgroundKeyArt,
 						className!
 					)}
-					style={useBackgroundKeyArt ? { backgroundImage: `url('${keyArt}')` } : undefined}>
+					style={useBackgroundKeyArt ? { backgroundImage: `url('${keyArt}')` } : undefined}
+					role="main">
 					{isPlayFabActivityVisible && isSignedIn ? (
 						<div className="grid grid-cols-playfab-visible">
 							{children}
@@ -114,7 +115,7 @@ export const Page: React.FunctionComponent<IProps> = ({
 					) : (
 						<>{children}</>
 					)}
-				</div>
+				</main>
 			</div>
 			<WSNotification />
 		</HelmetProvider>

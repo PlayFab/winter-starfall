@@ -45,7 +45,7 @@ interface IH1LeftWithButtonProps extends IPropsChildrenClassName {
 }
 
 export const H1LeftWithButton: React.FunctionComponent<IH1LeftWithButtonProps> = ({ button, children, className }) => (
-	<div className="flex w-full items-center">
+	<div className="flex items-center w-full">
 		<h1
 			className={combineClassNames(
 				"mt-2 grow text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight",
@@ -53,7 +53,7 @@ export const H1LeftWithButton: React.FunctionComponent<IH1LeftWithButtonProps> =
 			)}>
 			{children}
 		</h1>
-		<span className="ml-4 mt-2">{button}</span>
+		<span className="mt-2 ml-4">{button}</span>
 	</div>
 );
 
@@ -69,6 +69,10 @@ export const H2Left: React.FunctionComponent<IPropsChildrenClassName> = ({ child
 		)}>
 		{children}
 	</h2>
+);
+
+export const H2LeftAsH3: React.FunctionComponent<IPropsChildrenClassName> = ({ children, className }) => (
+	<h2 className={combineClassNames("mt-6 text-lg font-semibold text-gray-900", className!)}>{children}</h2>
 );
 
 export const H3Left: React.FunctionComponent<IPropsChildrenClassName> = ({ children, className }) => (
@@ -88,7 +92,7 @@ export const DivPageWrapper: React.FunctionComponent<IPropsChildrenClassName> = 
 );
 
 export const UlGridOfImages: React.FunctionComponent<IPropsChildren> = ({ children }) => (
-	<ul role="list" className="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+	<ul role="list" className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
 		{children}
 	</ul>
 );
@@ -151,13 +155,13 @@ export const Section: React.FunctionComponent<ISectionProps> = ({
 	title,
 }) => (
 	<section className={className}>
-		<div className="overflow-hidden rounded-lg bg-white shadow">
+		<div className="bg-white shadow rounded-lg overflow-hidden">
 			<div className={showTitleUnderline ? "divide-y divide-gray-200" : ""}>
 				<div className="flex items-center gap-2 p-4">
 					{!is.null(headerNodeLeft) && <div className="shrink-0">{headerNodeLeft}</div>}
 					<div className="grow">
-						<h2 className="text-lg font-medium text-gray-900">{title}</h2>
-						{!is.null(description) && <p className="mt-1 max-w-2xl text-sm text-gray-500">{description}</p>}
+						<h2 className="font-medium text-gray-900 text-lg">{title}</h2>
+						{!is.null(description) && <p className="mt-1 max-w-2xl text-gray-500 text-sm">{description}</p>}
 					</div>
 					{!is.null(headerNodeRight) && <div className="shrink-0">{headerNodeRight}</div>}
 				</div>

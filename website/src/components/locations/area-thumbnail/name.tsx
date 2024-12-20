@@ -7,7 +7,7 @@ import React from "react";
 import { combineClassNames } from "../../../shared/helpers";
 import { ILocationArea } from "../../../shared/types";
 import { WSButton } from "../../button";
-import { H3Left, PSubtitle } from "../../tailwind";
+import { H2LeftAsH3, PSubtitle } from "../../tailwind";
 
 interface IAreaThumbnailNameDescriptionProps {
 	description: string;
@@ -27,7 +27,7 @@ export const AreaThumbnailNameDescription: React.FunctionComponent<IAreaThumbnai
 	onBlur,
 }) => (
 	<>
-		<H3Left className="!mt-0">
+		<H2LeftAsH3 className="!mt-0">
 			<WSButton
 				style="link"
 				onClick={onClick}
@@ -39,7 +39,7 @@ export const AreaThumbnailNameDescription: React.FunctionComponent<IAreaThumbnai
 				onBlur={onBlur}>
 				{area.name}
 			</WSButton>
-		</H3Left>
+		</H2LeftAsH3>
 		<PSubtitle>{description}</PSubtitle>
 	</>
 );

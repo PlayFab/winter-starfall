@@ -4,6 +4,9 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	server: {
+		hmr: false,
+	},
 	build: {
 		chunkSizeWarningLimit: 2000,
 		target: "esnext",
