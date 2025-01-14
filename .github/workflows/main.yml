@@ -21,19 +21,19 @@ jobs:
         working-directory: ./website
         run: npm run build:unofficial
 
-      - name: Login to Azure
-        uses: azure/login@v1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Upload to Azure Blob Storage
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az storage blob upload-batch --source ./website/dist --destination '$web' --account-name winterstarfallstorage --auth-mode key --overwrite
+      - name: Upload to S3
+        run: |
+          aws s3 sync ./website/dist s3://${{ secrets.AWS_BUCKET_NAME }} --delete
 
-      - name: Clear Azure CDN
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "winterstarfall-cdn-standard" --name "winterstarfall-unofficial" --resource-group "winter-starfall-resources"
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} \
+            --paths "/*"
