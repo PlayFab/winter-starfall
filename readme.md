@@ -41,23 +41,6 @@ To use a Microsoft or Google account, play Winter Starfall at [winterstarfall-un
 
 Azure Functions in C# are available in the `/azure-functions` folder. You can run these locally or [deploy the project to Azure](https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code).
 
-## Credentials
-
-This project builds and deploys itself to an Azure Blob Storage account via GitHub Actions in `.github/workflows/main.yml`. If you'd like to do the same:
-
-1. In the [Azure Portal](https://portal.azure.com/), click the Cloud Shell button near the top right
-1. Modify the command below with your subscription ID and resource name
-    ```bash
-    az ad sp create-for-rbac --name "winter-starfall-github" --role contributor --scopes /subscriptions/YOUR_SUBSCRIPTION_ID/resourceGroups/YOUR_RESOURCE_GROUP_NAME --json-auth
-    ```
-1. Paste that command in the terminal and press `Enter`
-1. It will return a JSON object for use in step 8
-1. In GitHub, go to Settings > Secrets and variables > Actions
-1. Create a Repository secret
-1. Name: `AZURE_CREDENTIALS`
-1. Secret: (paste the JSON from step 4)
-1. Click **Add secret**
-
 # Social logins
 
 This game allows players to sign in using Microsoft, Google, and Facebook accounts.
